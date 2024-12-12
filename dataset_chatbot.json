@@ -1,0 +1,1524 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hallo", "hai", "halo", "hei", "hi", "hy", "pagi", "morning", "siang", "afternoon", "sore", "malam", "bro", "sis", "kawan", "???", "pagi"],
+      "responses": [
+        "Halo!",
+        "Hai, yang di sana!",
+        "Salam!",
+        "Ada yang bisa saya bantu?",
+        "Bagaimana cara membantu Anda hari ini?",
+        "Hai! Tokpedbot di sini. Mau tau informasi tentang apa nih?",
+        "Halo! Saya Tokpedbot, salam kenal ya! Mau tau tentang Tokopedia, kan?",
+        "Helo! Ini Tokpedbot. Lagi kepo tentang Tokopedia ya?"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Selamat tinggal", "Sampai jumpa lagi", "Selamat tinggal", "Dah", "Dadah", "Bye", "Byee", "Good bye", "Bai", "See you"],
+      "responses": ["Selamat tinggal!", "Sampai jumpa lagi!", "Hati-hati di jalan!", "Bye!", "Dadahh!", "Good bye!", "Dahh, semoga harimu menyenangkan yaa!", "Sampai jumpa lagi!", "See u! Senang bisa membantu"],
+      "context_set": ""
+    },
+    {
+      "tag": "terimakasih",
+      "patterns": ["Thanks", "Thank you", "Terima kasih", "Makasih", "Terima kasih banyak"],
+      "responses": ["Dengan senang hati :)", "Sama-sama yaa"]
+    },
+    {
+      "tag": "tokpedbot",
+      "patterns": ["Apa itu Tokpedbot?", "siapa kamu", "kamu apa", "Siapa Tokpedbot?"],
+      "responses": [
+        "Tokpedbot adalah aplikasi chatbot informasi tentang E Commerce Tokopedia yang dimulai dari sejarah, fitur, perbelanjaan, petunjuk dan lainya yang ada di website atau aplikasi Tokopedia!",
+        "Saya adalah Tokpedbot AI yang dibuat untuk membantu Anda."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "pelayanan",
+      "patterns": [
+        "Layanan apa yang Anda berikan?",
+        "bantu saya",
+        "Bagaimana Anda bisa membantu saya?",
+        "Apa yang bisa kamu lakukan?",
+        "apa yang bisa kamu lakukan",
+        "Apa hal yang dapat Anda lakukan",
+        "hal -hal yang dapat Anda lakukan",
+        "apa yang bisa kamu lakukan untukku",
+        "bagaimana kamu bisa membantu saya",
+        "Mengapa saya harus menggunakan Anda"
+      ],
+      "responses": ["Saya dapat membantu Anda seperti menjawab pertanyaan dan memberikan informasi terkait E Commerce Tokopedia."],
+      "context_set": ""
+    },
+    {
+      "tag": "pencipta_tokpedbot",
+      "patterns": ["siapa yang menciptakanmu", "Pengembang tokpedbot", "pencipta tokpedbot", "Siapa pengembang tokpedbot", "Anda dibuat oleh", "siapa yang menciptakan tokpedbot", "siapa yang membuatmu", "siapa yang mendesain tokpedbot"],
+      "responses": ["Mahasiswa AI Orbit Kelompok 2", "Pembuat KadekBot dari kalangan mahasiswa dan mahasiswi lho!", "Penciptaku berasal dari seorang mahasiswa yang kreatif, sehingga saya bisa aktif saat ini!"],
+      "context_set": ""
+    },
+    {
+      "tag": "direktur_tokopedia",
+      "patterns": ["siapa yang direktur utama tokopedia", "siapa bos tokopedia", "direktur tokopedia"],
+      "responses": ["Direktur Utama Tokopedia pada tahun 2024 adalah Vonny Ernita Susamto. Vonny menggantikan Melissa Siska Juminto yang kini menjabat sebagai direktur Tokopedia bersama Mengzhi Xu."],
+      "context_set": ""
+    },
+    {
+      "tag": "nama",
+      "patterns": ["nama", "Nama Anda", "Apakah Anda memiliki nama", "apa namamu", "siapa namamu?", "panggilan mu", "siapa ini"],
+      "responses": ["Nama saya adalah Tokpedbot."],
+      "context_set": ""
+    },
+    {
+      "tag": "jam_kerja",
+      "patterns": ["hari kerja tokopedia", "jam_kerja_tokopedia", "Kapan kalian buka", "Jam berapa Anda", "jam operasi"],
+      "responses": ["Aplikasi Tokopedia melayani Anda setiap hari untuk berbelanja sepuasnya"],
+      "context_set": ""
+    },
+    {
+      "tag": "nomor",
+      "patterns": [
+        "tokopedia care",
+        "info lebih lanjut",
+        "Bagaimana cara menghubungi dukungan pelanggan?",
+        "Apa kontak tokopedia",
+        "Bagaimana menelepon Tokopedia",
+        "bagaimana saya bisa menghubungi tokopedia",
+        "Bisakah saya mendapatkan nomor telepon tokopedia"
+      ],
+      "responses": ["Anda dapat menghubungi nomor berikut +62 812-2066-5557 (Tokopedia care)"],
+      "context_set": ""
+    },
+    {
+      "tag": "produk tokopedia",
+      "patterns": ["Daftar produk yang ditawarkan", "Apa saja produk yang tersedia di toko ini?", "produk yang tokopedia tawarkan", "Apa saja produk di tokopedia?", "Bisakah Anda memberi tahu saya produk yang tersedia di tokopedia?"],
+      "responses": [
+        "Tokopedia menawarkan berbagai produk seperti Peralatan rumah tangga, Elektronik, Fashion, Buku, Film & musik, Gaming, Kecantikan, Kesehatan, Logam Mulia, Mainan & Hobi, produk digital, tiket kereta, tiket pesawat, donasi, dan layanan finansial. Lebih detail check <a target=\"_blank\" href=\"https://www.tokopedia.com\">di sini</a> "
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "harga_produk",
+      "patterns": ["informasi tentang harga", "Ceritakan harganya", "harga per barang", "Berapa harga setiap produk", "harga untuk produk ini"],
+      "responses": ["Untuk detail harga, check di store kunjungi tokopedia <a target=\"_blank\" href=\"https://www.tokopedia.com\">di sini</a>"],
+      "context_set": ""
+    },
+    {
+      "tag": "lokasi",
+      "patterns": ["Dimana letak tokopedia", "Tokopedia pusat terletak di", "lokasi tokopedia di indonesia", "Cara menuju tokopedia", "bagaimana saya bisa menuju kantor tokopedia", "apa alamat tokopedia?"],
+      "responses": ["Untuk lokasi pusat Tokopedia di Indonesia, kunjungi <a target=\"_blank\" href=\"https://maps.app.goo.gl/KvSMXweR1evRn99E9\">di sini</a>"],
+      "context_set": ""
+    },
+    {
+      "tag": "promo",
+      "patterns": ["Daftar promo yang ada di tokopedia", "Promo apa yang dilakukan di tokopedia", "Apakah ada promo yang diadakan di toko", "Ceritakan tentang promo", "bagaimana dengan promo"],
+      "responses": ["Silahkan check aplikasi Tokopedia, bakalan ada promo setiap harinya! kunjungi <a target=\"_blank\" href=\"https://www.tokopedia.com\">di sini</a>"],
+      "context_set": ""
+    },
+    {
+      "tag": "toko",
+      "patterns": ["jumlah toko", "Banyak toko", "Berapa banyak toko yang dimiliki tokopedia", "Toko di tokopedia", "Berapa toko yang ada di tokopedia", "Toko"],
+      "responses": ["Jumlah toko di Tokopedia per Juni 2024 adalah lebih dari 21 juta penjual. Hampir 100% dari jumlah tersebut merupakan pelaku usaha mikro, kecil, dan menengah (UMKM) lokal."],
+      "context_set": ""
+    },
+    {
+      "tag": "fitur",
+      "patterns": ["fitur tokopedia", "fitur di tokopedia", "Apa fitur yang ada di tokopedia", "Apa fitur yang tersedia di tokopedia", "fitur apa yang bisa kita dapatkan di tokopedia"],
+      "responses": ["Tokopedia memiliki banyak fitur, di antaranya: Jual beli online, Layanan pengiriman, Fitur untuk penjual, Fitur untuk pembeli, Layanan lain, dll."],
+      "context_set": ""
+    },
+    {
+      "tag": "penempatan",
+      "patterns": ["Apa itu penempatan tokopedia", "Perusahaan mana yang dikunjungi di tokopedia", "Apa itu paket rata -rata", "Perusahaan berkunjung", "kemasan", "Tentang penempatan produk", "penempatan", "perekrutan", "perusahaan"],
+      "responses": ["Untuk mengetahui tentang penempatan, kunjungi <a target=\"_blank\" href=\"https://www.tokopedia.com\">di sini</a>"],
+      "context_set": ""
+    },
+    {
+      "tag": "pemilik_tokopedia",
+      "patterns": ["apa nama pendiri tokpedia", "apa nama pendiri", "Nama pendiri", "Siapa pendiri tokopedia", "Siapa yang punya tokopedia", "Pendiri", "Nama pendiri", "Milik siapa tokopedia", "Siapa yang bangun tokopedia"],
+      "responses": ["William Tanuwijaya. Ia mendirikan Tokopedia pada 17 Agustus 2009 bersama seorang temannya, Leontinus Alpha Edison."],
+      "context_set": ""
+    },
+    {
+      "tag": "random",
+      "patterns": ["Aku mencintaimu", "Maukah kamu menikah denganku", "Apakah kamu mencintaiku"],
+      "responses": ["Saya bukan di program untuk ini, silakan tanyakan pertanyaan yang sesuai"],
+      "context_set": ""
+    },
+    {
+      "tag": "kata_kasar",
+      "patterns": ["fuck", "jalang", "diam", "neraka", "bodoh", "idiot", "pantat bodoh", "bajingan", "anjing", "babi", "tolol", "goblog", "pantek", "begok", "sialan", "keparat"],
+      "responses": ["Harap gunakan bahasa yang sesuai"],
+      "context_set": ""
+    },
+    {
+      "tag": "apresiasi",
+      "patterns": ["okk", "Okie", "okok", "okey", "okay", "kerja bagus", "bagus sekali", "kerja bagus", "makasih", "Terima kasih atas bantuannya", "Terima kasih", "tidak apa-apa", "Terima kasih", "Kerja bagus", "k", "okee", "Oke", "Oke"],
+      "responses": ["Saya senang saya membantu Anda, sudah menjadi tugas saya.", "Terima kasih kembali! ada lagi yang bisa saya bantu?"],
+      "context_set": ""
+    },
+    {
+      "tag": "metode_pembayaran",
+      "patterns": [
+        "Metode pembayaran apa yang Anda terima di Tokopedia?",
+        "bisakah saya membayar pesanan dengan GoPay",
+        "bisakah saya membayar pesanan dengan GoPayLater",
+        "bisakah saya membayar pesanan dengan OVO",
+        "bisakah saya membayar pesanan dengan Virtual Account",
+        "bisakah saya membayar pesanan dengan Transfer bank",
+        "bisakah saya membayar pesanan dengan M-Banking",
+        "Apakah ada metode pembayaran selain transfer bank?",
+        "Kenapa metode pembayaran tertentu tidak muncul?",
+        "Apakah saya bisa membayar menggunakan e-wallet?"
+      ],
+      "responses": ["Tokopedia menerima berbagai metode pembayaran, di antaranya GoPay, GoPayLater, OVO, Virtual Account, Transfer Bank, BRI Ceria, BCA KlikPay, Mandiri Clickpay, LinkAja, BRImo."],
+      "context_set": ""
+    },
+    {
+      "tag": "pendaftaran_akun",
+      "patterns": ["Bagaimana cara mendaftar akun di Tokopedia?", "Saya ingin membuat akun di Tokopedia, bagaimana caranya?", "Apa langkah-langkah untuk registrasi akun di Tokopedia?", "Bisakah Anda membantu saya mendaftar akun?"],
+      "responses": [
+        "Untuk mendaftar akun di Tokopedia, buka aplikasi atau situs Tokopedia, pilih 'Daftar', masukkan email atau nomor telepon Anda, buat kata sandi, lalu ikuti langkah-langkah berikutnya.",
+        "Anda dapat mendaftar dengan mengisi email, nomor telepon, dan membuat kata sandi di halaman pendaftaran Tokopedia."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "reset_kata_sandi",
+      "patterns": [
+        "Saya lupa kata sandi akun saya, bagaimana cara meresetnya?",
+        "Bagaimana cara mengganti kata sandi saya?",
+        "Akun saya terkunci karena lupa password. Apa yang harus saya lakukan?",
+        "Bisakah saya mengatur ulang kata sandi Tokopedia saya?"
+      ],
+      "responses": [
+        "Anda bisa mereset kata sandi dengan klik 'Lupa Kata Sandi' di halaman login, lalu ikuti instruksi untuk mengatur ulang menggunakan email atau nomor telepon terdaftar.",
+        "Gunakan fitur 'Lupa Kata Sandi' pada aplikasi Tokopedia untuk mengganti kata sandi Anda dengan yang baru."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "voucher_diskon",
+      "patterns": ["Bagaimana cara mendapatkan voucher diskon di Tokopedia?", "Apa saja cara mendapatkan kupon diskon?", "Dimana saya bisa menemukan promo atau voucher di Tokopedia?", "Apakah ada voucher diskon untuk pembelian pertama?"],
+      "responses": ["Anda dapat menemukan voucher diskon di halaman promo Tokopedia atau melalui notifikasi di aplikasi.", "Cek bagian 'Promo Hari Ini' di aplikasi untuk mendapatkan voucher dan penawaran diskon terbaru."],
+      "context_set": ""
+    },
+    {
+      "tag": "waktu_pengiriman",
+      "patterns": [
+        "Berapa lama waktu pengiriman?",
+        "berapa lama pengiriman produk",
+        "berapa lama pengiriman barang",
+        "Berapa lama waktu pengiriman untuk pesanan saya?",
+        "berapa hari pengiriman produk setelah di checkout?",
+        "berapa hari pengiriman",
+        "berapa hari pengiriman barang setelah di checkout?",
+        "jangka waktu pengiriman produk"
+      ],
+      "responses": ["Waktu pengiriman bervariasi tergantung pada tujuan dan metode pengiriman yang dipilih.Pengiriman standar biasanya memakan waktu 3-5 hari kerja, sementara pengiriman ekspres dapat memakan waktu 1-2 hari kerja."],
+      "context_set": ""
+    },
+    {
+      "tag": "pengiriman_internasional",
+      "patterns": [
+        "Apakah Anda menawarkan pengiriman internasional?",
+        "bisakah saya mengirim produk saya ke luar negri?",
+        "bisakah mengirim produk ke luar negri?",
+        "Bisakah saya memesan produk untuk pengiriman ke negara yang berbeda?",
+        "bisakah mengirim produk antar negara?",
+        "apakah bisa mengantar produk ke negara tertentu?"
+      ],
+      "responses": ["Ya, kami menawarkan pengiriman internasional ke negara -negara tertentu. Biaya ketersediaan dan pengiriman akan dihitung selama proses checkout berdasarkan lokasi Anda."],
+      "context_set": ""
+    },
+    {
+      "tag": "kado",
+      "patterns": ["Apakah Anda menawarkan layanan pembungkus kado?", "apakah bisa membungkus barang yang saya pesan dengan kado"],
+      "responses": ["Ya, kami menawarkan layanan pembungkus hadiah dengan biaya tambahan.Selama proses checkout, Anda dapat memilih opsi untuk menambahkan pembungkus kado ke pesanan Anda."],
+      "context_set": ""
+    },
+    {
+      "tag": "kebijakan_harga",
+      "patterns": ["Apa kebijakan pencocokan harga Anda?", "bagaimana kebijakan harga produk anda?", "ketentuan harga"],
+      "responses": ["Kami memiliki kebijakan pencocokan harga di mana kami akan mencocokkan harga produk identik yang ditemukan di situs web pesaing.Silakan hubungi tim dukungan pelanggan kami dengan rincian produk dan penawaran pesaing."],
+      "context_set": ""
+    },
+    {
+      "tag": "pemesanan_telepon",
+      "patterns": ["Bisakah saya memesan melalui telepon?", "bisakah memesan barang dengan telepon", "bisakah membeli produk dengan menelpon pihak tokopedia"],
+      "responses": ["Sayangnya, kami tidak menerima pesanan melalui telepon.Harap letakkan pesanan Anda melalui situs web kami untuk transaksi yang lancar dan aman."],
+      "context_set": ""
+    },
+    {
+      "tag": "keamanan_pembayaran",
+      "patterns": ["Apakah detail pribadi dan pembayaran saya aman?", "apakah transaksi barang di tokopedia aman?", "apakah data pribadi saya aman?", "bagaimana keamanan pembayaran ditokopedia?", "bagaimana keamanan data pembayaran"],
+      "responses": ["Ya, kami menanggapi keamanan detail pribadi dan pembayaran Anda dengan serius.Kami menggunakan enkripsi standar industri dan mengikuti protokol keamanan yang ketat untuk memastikan informasi Anda dilindungi."],
+      "context_set": ""
+    },
+    {
+      "tag": "program_loyalitas",
+      "patterns": ["Apakah Anda memiliki program loyalitas?"],
+      "responses": [
+        "Ya, kami memiliki program loyalitas di mana Anda bisa mendapatkan poin untuk setiap pembelian.Poin -poin ini dapat ditebus dengan diskon untuk pesanan di masa depan.Silakan kunjungi situs web kami untuk mempelajari lebih lanjut dan bergabung dengan program ini."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "pesan_tanpa_akun",
+      "patterns": ["Bisakah saya memesan tanpa membuat akun?", "pesan barang tanpa akun apakah bisa?", "saya belum membuat akun tokopedia, apakah bisa memesan produk?", "apakah harus punya akun sebelum memesan barang?"],
+      "responses": ["Anda dapat memesan sebagai tamu tanpa membuat akun.Namun, membuat akun menawarkan manfaat seperti pelacakan pesanan dan pembelian yang lebih mudah di masa depan."],
+      "context_set": ""
+    },
+    {
+      "tag": "ulasan_produk",
+      "patterns": ["Bagaimana cara meninggalkan ulasan produk?", "bagaimana cara mengkritik produk", "Cara memberikan reputasi ke penjual?", "bisakah berkomentar tentang produk", "bagaimana memberikan ulasan produk"],
+      "responses": ["Untuk meninggalkan ulasan produk, navigasikan ke halaman produk di situs web kami dan klik tombol 'Tulis Ulasan'.Anda dapat membagikan umpan balik dan peringkat Anda berdasarkan pengalaman Anda dengan produk."],
+      "context_set": ""
+    },
+    {
+      "tag": "kehabisan_stok",
+      "patterns": [
+        "Bisakah saya memesan produk yang tidak stok?",
+        "kenapa saya tidak bisa memesan barang yang habis stok?",
+        "Dapatkah saya meminta produk yang kehabisan stok untuk diisi ulang?",
+        "kapan saya bisa memesan barang yang sudah habis stok?",
+        "Dapatkah saya meminta produk yang saat ini kehabisan stok untuk dicadangkan untuk saya?"
+      ],
+      "responses": ["Jika suatu produk saat ini kehabisan stok, Anda biasanya akan melihat opsi untuk mendaftar untuk pemberitahuan produk.Dengan cara ini, Anda akan diberitahu ketika produk tersedia lagi."],
+      "context_set": ""
+    },
+    {
+      "tag": "obrolan_langsung",
+      "patterns": ["Apakah Anda menawarkan dukungan obrolan langsung?"],
+      "responses": ["Ya, kami menawarkan dukungan obrolan langsung di situs web kami selama jam kerja kami.Cari ikon obrolan di sudut kanan bawah untuk memulai obrolan dengan tim dukungan pelanggan kami."],
+      "context_set": ""
+    },
+    {
+      "tag": "hadiah",
+      "patterns": [
+        "Bisakah saya memesan produk sebagai hadiah?",
+        "bisakah saya membeli produk yang bukan untuk saya?",
+        "bisakah saya membeli hadiah disini?",
+        "hadiah ulang tahun",
+        "saya ingin mengirim produk ke alamat pacar sebagai hadiah, apakah bisa"
+      ],
+      "responses": ["Ya, Anda dapat memesan produk sebagai hadiah dan mengirimkannya langsung ke penerima.Selama proses checkout, Anda dapat memasukkan alamat pengiriman penerima."],
+      "context_set": ""
+    },
+    {
+      "tag": "layanan_instalasi",
+      "patterns": ["Apakah Anda menawarkan layanan instalasi untuk produk Anda?", "bisakah saya memesan layanan instalasi?"],
+      "responses": ["Layanan instalasi tersedia untuk produk tertentu.Silakan periksa deskripsi produk atau hubungi tim dukungan pelanggan kami untuk informasi lebih lanjut dan untuk meminta layanan instalasi."],
+      "context_set": ""
+    },
+    {
+      "tag": "demonstrasi_produk",
+      "patterns": ["Bisakah saya meminta demonstrasi produk sebelum melakukan pembelian?"],
+      "responses": ["Kami saat ini tidak menawarkan demonstrasi produk sebelum dibeli.Namun, Anda dapat menemukan deskripsi produk terperinci, spesifikasi, dan ulasan pelanggan di situs web kami."],
+      "context_set": ""
+    },
+    {
+      "tag": "produk_tersedia",
+      "patterns": ["Apakah produk ini masih tersedia?", "apakah produk ini masih ada?", "apakah saya bisa memesan produk ini?", "apakah saya bisa membeli produk ini?", "ketersedian produk", "saya menginginkan produk ini"],
+      "responses": ["Ya, produk ini masih tersedia. Anda dapat langsung menambahkannya ke keranjang belanja."],
+      "context_set": ""
+    },
+    {
+      "tag": "camera",
+      "patterns": [
+        "Saya ingin membeli camera, bagaimana caranya?",
+        "Bisakah saya membeli camera online?",
+        "Tolong bantu saya menemukan produk camera.",
+        "Bagaimana cara memesan camera?",
+        "Apakah camera masih tersedia?",
+        "Dimana saya bisa membeli camera?",
+        "Saya ingin tahu ketersediaan camera.",
+        "Apakah produk camera tersedia saat ini?"
+      ],
+      "responses": [
+        "Untuk produk camera, silahkan kunjungi <a target=\"_blank\" href=\"https://www.tokopedia.com/search?navsource=&search_id=2024120116195798880683C462C43D7E27&srp_component_id=04.06.00.00&srp_page_id=&srp_page_title=&st=&q=camera\">di sini</a>"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "handphone",
+      "patterns": [
+        "Saya ingin membeli handphone, bagaimana caranya?",
+        "Bisakah saya membeli handphone online?",
+        "Tolong bantu saya menemukan produk handphone.",
+        "Bagaimana cara membeli handphone?",
+        "Apakah handphone masih tersedia?",
+        "Saya ingin tahu ketersediaan handphone.",
+        "Dimana saya bisa memesan handphone?",
+        "Apakah stok handphone masih ada?"
+      ],
+      "responses": ["untuk produk handphone, silahkan kunjungi <a target=\"_blank\" href=\"https://www.tokopedia.com/search?q=handphone&source=universe&st=product&srp_component_id=02.02.01.01\">di sini</a>"],
+      "context_set": ""
+    },
+    {
+      "tag": "Laptop",
+      "patterns": [
+        "Saya ingin membeli Laptop, bagaimana caranya?",
+        "Bisakah saya membeli Laptop online?",
+        "Tolong bantu saya menemukan produk Laptop.",
+        "Bagaimana cara membeli laptop?",
+        "Apakah laptop masih tersedia?",
+        "Saya ingin tahu ketersediaan laptop.",
+        "Dimana saya bisa memesan laptop?",
+        "Apakah stok laptop masih ada?"
+      ],
+      "responses": ["untuk produk laptop, silahkan kunjungi <a target=\"_blank\" href=\"https://www.tokopedia.com/search?q=handphone&source=universe&st=product&srp_component_id=02.02.01.01\">di sini</a>"],
+      "context_set": ""
+    },
+    {
+      "tag": "mouse",
+      "patterns": [
+        "Saya ingin membeli mouse, bagaimana caranya?",
+        "Bisakah saya membeli mouse online?",
+        "Tolong bantu saya menemukan produk mouse.",
+        "Apakah mouse masih tersedia?",
+        "Bagaimana cara membeli mouse?",
+        "Dimana saya bisa memesan mouse?",
+        "Saya ingin tahu ketersediaan mouse.",
+        "Mouse ini apakah masih ada di stok?"
+      ],
+      "responses": ["untuk produk mouse, silahkan kunjungi <a target=\"_blank\" href=\"https://www.tokopedia.com/search?q=handphone&source=universe&st=product&srp_component_id=02.02.01.01\">di sini</a>"],
+      "context_set": ""
+    },
+    {
+      "tag": "celana",
+      "patterns": [
+        "Saya ingin membeli celana, bagaimana caranya?",
+        "Bisakah saya membeli celana online?",
+        "Tolong bantu saya menemukan produk celana.",
+        "Apakah celana masih tersedia?",
+        "Bagaimana cara membeli celana?",
+        "Dimana saya bisa memesan celana?",
+        "Saya ingin tahu ketersediaan celana.",
+        "Celana ini apakah masih ada?"
+      ],
+      "responses": ["untuk produk celana, silahkan kunjungi <a target=\"_blank\" href=\"https://www.tokopedia.com/search?st=product&q=celana&srp_component_id=02.01.00.00&srp_page_id=&srp_page_title=&navsource=home,home\">di sini</a>"],
+      "context_set": ""
+    },
+    {
+      "tag": "kemeja",
+      "patterns": [
+        "Saya ingin membeli kemeja, bagaimana caranya?",
+        "Bisakah saya membeli kemeja online?",
+        "Tolong bantu saya menemukan produk kemeja",
+        "Apakah kemeja masih tersedia?",
+        "Bagaimana cara membeli kemeja?",
+        "Dimana saya bisa memesan kemeja?",
+        "Saya ingin tahu ketersediaan kemeja.",
+        "Kemeja ini apakah masih ada di stok?"
+      ],
+      "responses": ["untuk produk kemeja, silahkan kunjungi <a target=\"_blank\" href=\"https://www.tokopedia.com/search?st=product&q=kemeja&srp_component_id=02.01.00.00&srp_page_id=&srp_page_title=&navsource=home,home\">di sini</a>"],
+      "context_set": ""
+    },
+    {
+      "tag": "sepatu",
+      "patterns": [
+        "Saya ingin membeli sepatu, bagaimana caranya?",
+        "Bisakah saya membeli sepatu online?",
+        "Tolong bantu saya menemukan produk sepatu",
+        "Apakah sepatu masih tersedia?",
+        "Bagaimana cara membeli sepatu?",
+        "Dimana saya bisa memesan sepatu?",
+        "Saya ingin tahu ketersediaan sepatu.",
+        "sepatu ini apakah masih ada?"
+      ],
+      "responses": ["untuk produk sepatu, silahkan kunjungi <a target=\"_blank\" href=\"https://www.tokopedia.com/search?st=&q=sepatu&srp_component_id=02.01.00.00&srp_page_id=&srp_page_title=&navsource=\">di sini</a>"],
+      "context_set": ""
+    },
+    {
+      "tag": "kacamata",
+      "patterns": [
+        "Saya ingin membeli kacamata, bagaimana caranya?",
+        "Bisakah saya membeli kacamata online?",
+        "Tolong bantu saya menemukan produk kacamata",
+        "Apakah kacamata masih tersedia?",
+        "Bagaimana cara membeli kacamata?",
+        "Dimana saya bisa memesan kacamata?",
+        "Saya ingin tahu ketersediaan kacamata.",
+        "Kacamata ini apakah masih ada?"
+      ],
+      "responses": ["untuk produk kacamata, silahkan kunjungi <a target=\"_blank\" href=\"https://www.tokopedia.com/search?st=&q=kacamata&srp_component_id=02.01.00.00&srp_page_id=&srp_page_title=&navsource=\">di sini</a>"],
+      "context_set": ""
+    },
+    {
+      "tag": "tas",
+      "patterns": [
+        "Saya ingin membeli tas, bagaimana caranya?",
+        "Bisakah saya membeli tas online?",
+        "Tolong bantu saya menemukan produk tas",
+        "Apakah tas masih tersedia?",
+        "Bagaimana cara membeli tas?",
+        "Dimana saya bisa memesan tas?",
+        "Saya ingin tahu ketersediaan tas.",
+        "tas ini apakah masih ada?"
+      ],
+      "responses": ["untuk produk tas, silahkan kunjungi <a target=\"_blank\" href=\"https://www.tokopedia.com/search?st=&q=tas&srp_component_id=02.01.00.00&srp_page_id=&srp_page_title=&navsource=\">di sini</a>"],
+      "context_set": ""
+    },
+    {
+      "tag": "jam_tangan",
+      "patterns": [
+        "Saya ingin membeli jam tangan, bagaimana caranya?",
+        "Bisakah saya membeli jam tangan online?",
+        "Tolong bantu saya menemukan produk jam tangan",
+        "Apakah jam tangan masih tersedia?",
+        "Bagaimana cara membeli jam tangan?",
+        "Dimana saya bisa memesan jam tangan?",
+        "Saya ingin tahu ketersediaan jam tangan.",
+        "jam tangan ini apakah masih ada?"
+      ],
+      "responses": ["untuk produk jam tangan, silahkan kunjungi <a target=\"_blank\" href=\"https://www.tokopedia.com/search?st=&q=jam+tangan&srp_component_id=02.01.00.00\">di sini</a>"],
+      "context_set": ""
+    },
+    {
+      "tag": "baju_anak",
+      "patterns": [
+        "Saya ingin membeli baju anak, bagaimana caranya?",
+        "Bisakah saya membeli baju anak online?",
+        "Tolong bantu saya menemukan produk baju anak",
+        "Apakah baju anak masih tersedia?",
+        "Bagaimana cara membeli baju anak?",
+        "Dimana saya bisa memesan baju anak?",
+        "Saya ingin tahu ketersediaan baju anak.",
+        "Baju anak apakah masih ada?"
+      ],
+      "responses": ["Untuk produk baju anak, silahkan kunjungi <a target=\"_blank\" href=\"https://www.tokopedia.com/search?q=baju+anak\">di sini</a>."],
+      "context_set": ""
+    },
+    {
+      "tag": "melakukan_pembelian",
+      "patterns": [
+        "Bagaimana cara melakukan pembelian di Tokopedia?",
+        "alur melakukan pembelian produk bagaimana?",
+        "bagaimana langkah melakukan pembelian sebuah produk?",
+        "saya ingin melakukan pembelian produk itu, bagaimana caranya?",
+        "saya tidak tau cara langkah pembelian produk"
+      ],
+      "responses": ["Untuk melakukan pembelian, silakan pilih produk yang Anda inginkan, klik 'Beli Sekarang', dan ikuti langkah-langkah untuk menyelesaikan pembayaran."],
+      "context_set": ""
+    },
+    {
+      "tag": "mengubah_akun",
+      "patterns": [
+        "Bagaimana cara mengubah informasi akun saya",
+        "bagaimana langkah mengubah data akun saya",
+        "mengubah informasi akun saya?",
+        "saya ingin mengubah nama di akun saya",
+        "saya ingin mengubah poto profile akun saya",
+        "saya ingin mengubah nomor telepon akun saya"
+      ],
+      "responses": ["Anda dapat mengubah informasi akun Anda dengan masuk ke halaman 'Akun Saya' dan memilih opsi 'Edit Profil'."],
+      "context_set": ""
+    },
+    {
+      "tag": "cara_belanja",
+      "patterns": ["Bagaimana alur cara belanja di Tokopedia?", "saya ingin belanja di tokopedia, bagaimana caranya?", "saya tidak tau bagaimana cara belanja di tokopedia"],
+      "responses": [
+        "Berikut cara belanja di Tokopedia:\n1. Tentukan produk yang ingin kamu beli, selanjutnya klik + keranjang atau beli langsung.\n2. Kemudian klik cek keranjang.\n3. Selanjutnya pilih beli untuk melanjutkan proses belanja.\n4. Selanjutnya klik pilih pembayaran.\n5. Pilih metode pembayaran, kemudian klik bayar. Pastikan kamu membayar sebelum batas waktu yang diberikan habis, agar tidak terjadi pembatalan pesanan.\nCatatan: Kamu bisa menambahkan maksimal 50 produk atau 30 toko ke dalam keranjang."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "menghapus_produk",
+      "patterns": ["Cara menghapus produk di keranjang belanja?", "saya tidak jadi membeli produk ini, bagaimana cara menghapus produk dari keranjang?"],
+      "responses": ["Silakan ikuti beberapa langkah ini:\n1. Untuk menghapus produk di keranjang belanja, ceklis produk yang mau kamu hapus lalu klik hapus.\n2. Akan muncul halaman konfirmasi, klik hapus."],
+      "context_set": ""
+    },
+    {
+      "tag": "mencari_produk",
+      "patterns": ["Bagaimana cara mencari produk di Tokopedia?", "saya ingin mencari produk di tokopedia, bagaimana?", "saya tidak tau cara mencari produk di tokopedia", "saya bingung mencari produk di tokopedia"],
+      "responses": [
+        "Kamu dapat memulainya dengan klik menu paling banyak dicari, kategori, ataupun kolom search. Kamu juga dapat mengikuti panduan cari produk sesuai dengan gadget yang kamu gunakan.\n\n1. Paling banyak dicari:\nDi menu paling banyak dicari, kamu dapat menemukan produk-produk yang sedang trend/populer atau yang banyak dicari oleh pengguna Tokopedia. Berikut panduannya: pada homepage Tokopedia klik lihat semua paling banyak dicari.\n\n2. Kategori:\nMencari produk yang diinginkan jadi semakin mudah melalui menu kategori. Berikut panduannya: Pada homepage Tokopedia, klik kategori, lalu pilih kategori produk yang kamu inginkan.\n\n3. Search:\nCukup masukkan nama produk yang kamu inginkan pada kolom search, maka produk tersebut akan muncul pada hasil pencarian. Berikut panduannya: Masukkan nama produk pada kolom search, lalu klik hasil produk yang muncul pada pencarian."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "konten_umur",
+      "patterns": ["Konten apa saja yang membutuhkan konfirmasi umur?"],
+      "responses": ["Produk dewasa, seperti alat pengaman (kondom), obat-obatan, alat bantu untuk berhubungan intim, dan vaporizer."],
+      "context_set": ""
+    },
+    {
+      "tag": "verifikasi_tanggal_lahir",
+      "patterns": [
+        "Kenapa saya diminta verifikasi tanggal lahir?",
+        "verifikasi tanggal lahir",
+        "Saya sudah melakukan verifikasi tanggal lahir dengan usia di bawah 21 tahun, tapi mengapa saya diarahkan ke Homepage Tokopedia setelah mengklik tautan tersebut?",
+        "mengapa produk yang saya cari tidak muncul dipencarian?",
+        "Mengapa saya tidak bisa mengakses halaman kategori/produk/mendapatkan hasil pencarian kata kunci tertentu tapi mendapatkan notifikasi peringatan konten dewasa?",
+        "untuk apa verifikasi tanggal lahir?"
+      ],
+      "responses": ["Tokopedia ingin memastikan kamu memasukkan tanggal lahir yang sebenar-benarnya. Sehingga kami bisa memberikan rekomendasi produk yang sesuai usia masing-masing pengguna."],
+      "context_set": ""
+    },
+    {
+      "tag": "tips_belanja",
+      "patterns": ["Tips belanja aman dan nyaman di Tokopedia?", "berikan saya tips belanja di tokopedia?"],
+      "responses": [
+        "Lakukan tips berbelanja di Tokopedia di bawah ini:\n1. Perhatikan nama, deskripsi, dan gambar produk yang kamu inginkan secara detail. Lihat reputasi toko (rating & cancel rate), review, dan diskusi produk.\n2. Pastikan semua komunikasi dilakukan melalui platform Tokopedia, abaikan jika terdapat ajakan untuk komunikasi di luar platform Tokopedia.\n3. Pastikan tidak mentransfer langsung dana ke penjual. Lakukan pembayaran hanya ke nomor rekening atas nama PT TOKOPEDIA.\n4. Jangan lakukan Konfirmasi Penerimaan sebelum pesanan sampai.\n5. Segera cek barang yang kamu terima apakah sudah sesuai dengan kriteria yang kamu beli."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "konfirmasi_produk",
+      "patterns": ["Bagaimana cara konfirmasi penerimaan produk?", "produk saya sudah sampai, bagaimana konfirmasi nya?", "bagiamana jika pesanan saya sudah sampai?"],
+      "responses": [
+        "Apabila pesanan kamu sudah sampai, pastikan kamu melakukan konfirmasi penerimaan untuk menyelesaikan transaksi pembelian. Apabila dalam waktu 2x24 jam kamu tidak melakukan konfirmasi penerimaan, transaksi akan dianggap selesai oleh sistem dan pembayaran akan diteruskan ke saldo Tokopedia penjual.\nBerikut step untuk melakukan konfirmasi penerimaan:\n1. Pilih menu daftar transaksi - belanja\n2. Fitur status pesanan tiba\n3. Klik selesai pada pesanan yang ingin kamu konfirmasi"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "menghubungi_penjual",
+      "patterns": ["Bagaimana cara menghubungi penjual?", "saya ingin menanyakan detail produk ke penjual", "Pembeli ingin hubungi Penjual", "saya ingin menghubungi penjual untuk menambahkan sesuatu", "bagaimana chat dengan penjual?"],
+      "responses": [
+        "1. Kirim Pesan Berikut panduan menggunakan fitur Kirim Pesan:\n2. Klik ikon chat pada bagian bawah halaman toko.\n3. Masukkan subjek dan isi pesan. Klik ikon kirim\n4. Kamu juga dapat mengirim pesan ke penjual melalui halaman rincian produk. Berikut panduannya:\n1. Klik ikon chat di bagian bawah halaman rincian produk.\n2. Masukkan subjek dan isi pesan. Klik ikon kirim"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "diskusi_produk",
+      "patterns": ["Diskusi produk"],
+      "responses": [
+        "Melalui Diskusi Produk kamu juga dapat melihat pertanyaan-pertanyaan dari pembeli lainnya. Berikut ini panduan bertanya melalui diskusi produk:\n1. Buka halaman produk yang ingin kamu beli, kemudian klik lihat semua pada bagian diskusi paling membantu.\n2. Klik ikon tambah\n3. Masukkan pertanyaan kamu pada kolom yang tersedia, kemudian klik kirim."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "cek_resi",
+      "patterns": ["Tidak dapat melacak resi pengiriman di Tokopedia", "resi tidak muncul", "saya khawatir dengan status pengiriman produk saya, karena tidak bisa cek resi"],
+      "responses": [
+        "Kamu jangan khawatir apabila kamu tidak dapat melacak resi pengiriman di aplikasi Tokopedia, karena kamu dapat cek resi manual di cekresi.com.\nApabila transaksi kamu masih dalam pengiriman menuju alamat tujuan, mohon menunggu terlebih dahulu proses pengirimannya sesuai dengan estimasi waktu proses pengantaran yang berlangsung.\nBerikut penyebab resi pengiriman kamu tidak dapat dilacak:\n1. Kurir pengiriman belum memperbarui status.\n2. No. resi yang diinput tidak sesuai atau bukan kurir yang bekerjasama dengan Tokopedia.\n3. Situs kurir pengiriman sedang berkendala.\n4. Kesalahan input tanggal pengiriman\n5. Proses update antara Tokopedia dengan pihak kurir membutuhkan waktu maksimal 1x24 jam.\n6. Pesanan gagal dilakukan pick up dalam waktu 3x24 jam."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "kesalahan_konfirmasi_penerimaan",
+      "patterns": ["Saya tidak sengaja melakukan kesalahan konfirmasi penerimaan", "saya salah menekan konfirmasi penerimaan produl, padahal produk belum datang"],
+      "responses": [
+        "Apabila kamu sudah terlanjur melakukan konfirmasi penerimaan padahal barang belum diterima, maka dana akan diteruskan ke penjual secara otomatis. Jangan khawatir, kamu dapat tindak lanjuti kendala kepada penjual dan pihak kurir dengan klik ajukan komplain di bawah."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "transaksi_dibatalkan",
+      "patterns": ["Penyebab transaksi dibatalkan otomatis", "transaksi saya dibatalkan", "saya tidak bisa transaksi karna dibatalkan"],
+      "responses": [
+        "Transaksi dibatalkan otomatis oleh sistem dapat disebabkan beberapa hal, diantaranya:\n1. Stok produk tidak mencukupi atau kosong saat pembeli melakukan pembayaran.\n2. Penjual tidak merespon pesanan dalam waktu 1x24 jam.\n3. Melebihi batas waktu pembayaran setelah proses checkout.\n4. Kamu menggunakan lebih dari satu akun saat bertransaksi menggunakan promo atau voucher pada transaksi yang sama."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "berat_barang",
+      "patterns": ["Apa penyebab adanya perbedaan berat barang?", "Apabila terdapat perbedaan berat sebelum dan setelah pengiriman, apa yang harus saya lakukan?"],
+      "responses": ["Hal tersebut bisa terjadi karena adanya perbedaan bentuk packing dari paket atau karena perhitungan berat secara volumetrik. Lihat cara perhitungan berat paket pada tab cara menghitung berat paket."],
+      "context_set": ""
+    },
+    {
+      "tag": "kupon",
+      "patterns": ["Bagaimana cara mendapatkan kupon?", "saya ingin mendapatkan kupon", "kupon", "cara mendapat kupon"],
+      "responses": [
+        "Kupon dapat diperoleh dengan cara:\n1. Meningkatkan level membership untuk mendapatkan keuntungan.\n2. Mengumpulkan stamp TokoMember dan menukarkannya dengan kupon.\n3. Menyelesaikan misi untuk mendapatkan hadiah kupon.\n4. Klaim kupon di halaman rewards."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "masa_kupon",
+      "patterns": ["Berapa lama masa berlaku kupon yang saya miliki?"],
+      "responses": ["Setiap kupon memiliki masa aktif dan ketentuan berbeda-beda. Kamu dapat mengecek syarat dan ketentuan pada masing-masing kupon."],
+      "context_set": ""
+    },
+    {
+      "tag": "paket_data",
+      "patterns": ["Cara membeli paket data melalui Tokopedia", "saya ingin membeli paket data", "apakah saya bisa membeli paket data di tokopedia?", "apakah paket data tersedia di tokopedia"],
+      "responses": [
+        "Saat ini kamu dapat dengan mudah melakukan isi ulang Paket Data di Tokopedia. Berikut cara melakukan pembelian paket data di Tokopedia: 1. Buka aplikasi tokopedia kamu, lalu pilih menu top up dan tagihan kemudian klik Paket Data. Kamu juga dapat langsung mengakses www.tokopedia.com/paket-data/. 2. Setelah itu, isi nomor yang dituju serta nominal paket data yang kamu inginkan. Kamu dapat melihat nomor dan total harganya, lalu klik lanjut untuk memproses ke halaman pembayaran. 3. Pada halaman detail pesanan akan tertera nomor telepon tujuan serta nominal yang harus kamu bayarkan. Pastikan nomor telepon sudah sesuai, setelah itu klik bayar. 4. Setelah masuk ke halaman pembayaran, pilih metode pembayaran yang kamu inginkan. 5. Setelah itu, klik bayar untuk melakukan pembayaran."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "token_listrik",
+      "patterns": ["Cara membeli token listrik melalui Tokopedia", "saya ingin membeli token listrik", "apakah saya bisa membeli token listrik di tokopedia?", "apakah token listrik tersedia di tokopedia"],
+      "responses": [
+        "Saat ini kamu dapat dengan mudah melakukan isi ulang token listrik di Tokopedia. Berikut cara melakukan pembelian paket data di Tokopedia: 1. Buka aplikasi tokopedia kamu, lalu pilih menu top up dan tagihan kemudian klik Token Listrik. Kamu juga dapat langsung mengakses www.tokopedia.com/paket-data/. 2. Setelah itu, isi nomor yang listrik kamu serta nominal token yang kamu inginkan. Kamu dapat melihat nomor listrik dan total harganya, lalu klik lanjut untuk memproses ke halaman pembayaran. 3. Pada halaman detail pesanan akan tertera nomor listirk tujuan serta nominal yang harus kamu bayarkan. Pastikan nomor listrik sudah sesuai, setelah itu klik bayar. 4. Setelah masuk ke halaman pembayaran, pilih metode pembayaran yang kamu inginkan. 5. Setelah itu, klik bayar untuk melakukan pembayaran."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "transaksi_gagal",
+      "patterns": ["Mengapa transaksi saya gagal?"],
+      "responses": [
+        "Kemungkinan terjadi gangguan koneksi saat kami meneruskan pembayaran kamu. Namun, tidak perlu khawatir uang yang kamu bayarkan akan di-refund ke Saldo Tokopedia kamu. Selanjutnya kamu bisa mencoba kembali untuk melakukan pembayaran biaya pendidikan setelah beberapa saat."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "membayar_tagihan",
+      "patterns": ["Apakah saya bisa membayar semua tagihan sekaligus?"],
+      "responses": ["Saat ini kamu hanya bisa memilih 1 tagihan untuk setiap kali pembayaran. Namun, tenang saja, kami sedang dalam tahap pengembangan untuk memudahkan kamu yang ingin membayar tagihannya sekaligus."],
+      "context_set": ""
+    },
+    {
+      "tag": "transaksi_berhasil",
+      "patterns": ["Bagaimana saya memastikan transaksi yang saya lakukan telah berhasil?", "transaksi berhasil"],
+      "responses": ["Jika transaksi kamu berhasil, kamu akan mendapatkan invoice dari Tokopedia. Invoice tersebut merupakan bukti bayar yang sah atas transaksi dimaksud."],
+      "context_set": ""
+    },
+    {
+      "tag": "tiket_kereta_api",
+      "patterns": ["Cara pesan tiket kereta api di Tokopedia", "saya ingin membeli tiket kerete api", "saya tidak tau bagaimana cara membeli tiket kereta api"],
+      "responses": [
+        [
+          "Untuk memesan tiket kereta api di Tokopedia kamu dapat mengikuti langkah-langkah berikut mulai dari pencarian tiket, mengisi data penumpang, memilih kursi, hingga melakukan pembayaran tiket di Tokopedia dan kemudian menikmati perjalanan kamu. Berikut cara pesan tiket kereta api di Tokopedia:",
+          "1. Buka halaman tiket kereta Tokopedia.",
+          "2. Apabila kamu hanya ingin mencari tiket sekali jalan, non-aktifkan kursor pulang pergi.",
+          "3. Apabila kamu ingin mencari tiket pulang-pergi, aktifkan kursor tersebut.",
+          "4. Isi data stasiun asal dan stasiun tujuan, tanggal keberangkatan dan/atau kepulangan, jumlah penumpang. Kemudian klik cari tiket.",
+          "5. Kamu bisa menyortir pilihan tiket sesuai dengan pilihan waktu pergi, pilihan kelas, pilihan kereta, dan pilihan harga. Selanjutnya klik pilih pada pilihanmu.",
+          "6. Isi data penumpang, kemudian klik pesan tiket.",
+          "7. Akan muncul pop up, pastikan data yang kamu masukan sudah benar dan sesuai dengan kartu identitas. Lalu, klik pesan tiket.",
+          "8. Pada halaman ringkasan pesanan klik pilih pembayaran.",
+          "9. Sistem akan melakukan pengecekan apakah calon penumpang sudah melakukan vaksin atau belum.",
+          "10. Jika calon penumpang sudah melakukan vaksin akan muncul pop up.",
+          "11. Selanjutnya lakukan pembayaran dengan metode pembayaran yang kamu pilih."
+        ]
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "membatalkan_tiket_kereta_api",
+      "patterns": ["Cara membatalkan pesanan tiket KAI", "saya ingin membatalkan tiket kereta api"],
+      "responses": [
+        [
+          "Tokopedia hanya berperan sebagai perantara dalam proses pemesanan tiket. Untuk pembatalan pemesanan Tiket KAI atau mengubah jadwal keberangkatan, kamu dapat menghubungi pihak stasiun kereta atau ke pihak KAI secara langsung.",
+          "Apabila kamu ingin melakukan pembatalan tiket Kereta Api, kamu dapat melakukannya melalui Loket yang ada di stasiun Kereta Api atau melalui aplikasi KAI Access.",
+          "Berikut cara membatalkan pesanan tiket KAI:",
+          "1. Loket: Datang langsung ke stasiun Kereta Api yang melayani pembatalan tiket Kereta Api dengan membawa identitas asli dan fotokopi identitas yang digunakan saat melakukan pemesanan tiket.",
+          "2. Aplikasi KAI Access: Pastikan kamu sudah memiliki aplikasi KAI Access pada smartphone kamu dan sudah menambahkan tiket yang kamu beli sebelumnya.",
+          "3. Pada menu Tiket pilih kode booking perjalanan kereta yang akan dibatalkan dan klik tombol Pembatalan."
+        ]
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "pulsa",
+      "patterns": ["Cara membeli pulsa melalui Tokopedia", "pulsa", "saya ingin membeli pulsa"],
+      "responses": [
+        [
+          "Kini, pembelian pulsa dengan mudah dan praktis dapat dilakukan di Tokopedia. Simak caranya berikut ini.",
+          "1. Buka aplikasi Tokopedia lalu klik pulsa pada menu top up dan tagihan.",
+          "2. Isi nomor telepon dan nominal pulsa yang kamu inginkan, kemudian klik lanjut.",
+          "3. Setelah itu, kamu akan masuk ke halaman checkout.",
+          "4. Setelah masuk ke halaman pembayaran, kamu dapat memilih metode pembayaran yang kamu inginkan. Lalu klik bayar untuk melakukan pembayaran."
+        ]
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "pembayaran_PDAM",
+      "patterns": ["Syarat dan ketentuan pembayaran tagihan air PDAM di Tokopedia"],
+      "responses": [
+        [
+          "Tokopedia selalu berusaha menghadirkan kemudahan yang dapat memberikan banyak manfaat bagi kamu, salah satunya adalah pembayaran tagihan air PDAM di Tokopedia.",
+          "1. Pastikan kamu sudah memiliki akun Tokopedia dan sudah melakukan verifikasi nomor handphone.",
+          "2. Pengguna akan dikenakan biaya administrasi oleh PDAM.",
+          "3. Biaya administrasi dikenakan per tagihan bulanan.",
+          "4. Pembayaran tagihan air PDAM yang dilakukan setelah tanggal jatuh tempo akan dikenakan denda.",
+          "5. Tokopedia tidak bertanggung jawab atas kesalahan pembayaran yang dikarenakan kesalahan input nomor pelanggan atau nomor meteran."
+        ]
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "menghubungkan_akun_ovo",
+      "patterns": ["Saya ingin menghubungkan beberapa akun tokopedia dengan 1 akun OVO"],
+      "responses": [
+        [
+          "1. Kamu dapat mengaktifkan lebih dari 1 akun Tokopedia dengan 1 akun OVO untuk nomor handphone yang sama.",
+          "2. Akun Tokopedia yang mengaktifkan OVO pertama kali akan menjadi akun primer yang akan terhubung dengan akun OVO.",
+          "3. Akun lainnya akan menjadi akun sekunder yang terhubung dengan akun OVO."
+        ]
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "aktivasi_gopay",
+      "patterns": ["Cara aktivasi GoPay later", "saya ingin menagktifkan gopay later", "bagaimana cara aktivasi gopay later?"],
+      "responses": [
+        "GoPay later hadir spesial buat kamu dengan jatuh tempo yang lebih lama hingga 45 hari serta berbagai keuntungan lainnya. Berikut cara aktifkan GoPay later:\n1. Buka halaman GoPay later, klik aktifkan GoPay later.\n2. Baca serta pahami syarat dan ketentuan, lalu klik setuju dengan syarat & ketentuan.\n3. Siapkan identitas berupa KTP, foto selfie, dan data diri.\n4. Pastikan data diri sudah sesuai sebelum klik kirim pendaftaran.\n5. Masukkan kode OTP yang dikirim melalui SMS ke Nomor HP terdaftar.\n6. Pengajuan diproses maksimum 1x24 jam.\n7. Cek status pengajuan melalui ikon GoPay later di halaman utama atau di dashboard GoPay."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "reksa_dana",
+      "patterns": ["Cara pembelian unit reksa dana", "saya ingi membeli reksa dana", "bagaimana cara membeli unit reksa dana", "langkah membeli unit reksa dana"],
+      "responses": [
+        "Langkah pembelian unit reksa dana di Tokopedia:\n1. Kunjungi halaman Tokopedia reksa dana, pastikan terdaftar.\n2. Pilih produk reksa dana, klik beli.\n3. Masukkan nominal investasi (minimum Rp10.000).\n4. Pilih metode pembayaran (transfer bank, virtual account, GoPay, dll.).\n5. Unit reksa dana akan diproses maksimal 2 hari kerja."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "tujuan_tokopedia",
+      "patterns": ["Apa tujuan Tokopedia?", "mengapa ada tokopedia?", "mengapa tokopedia?"],
+      "responses": ["Tujuan Tokopedia adalah untuk mencapai pemerataan ekonomi digital di Indonesia. Tokopedia memiliki visi untuk membangun ekosistem yang memungkinkan siapa pun untuk memulai dan menemukan apa pun."],
+      "context_set": ""
+    },
+    {
+      "tag": "persyaratan_affiliate_tokopedia",
+      "patterns": ["Apa persyaratan menjadi affiliate tokopedia?"],
+      "responses": [
+        "Ketentuan dan Syarat Shopee Affiliate:",
+        "1. Memiliki akun media sosial aktif.",
+        "2. Akun media sosial merupakan akun pribadi.",
+        "3. Akun media sosial tidak mengandung SARA.",
+        "4. Tidak memasarkan produk yang dilarang.",
+        "5. Shopee berhak menggunakan kembali kontennya.",
+        "Cara daftar Shopee Affiliate lewat aplikasi."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "persyaratan_seller_tokopedia",
+      "patterns": ["Apa persyaratan menjadi seller tokopedia?"],
+      "responses": [
+        "Untuk menjadi seller di Tokopedia, Anda perlu memenuhi beberapa persyaratan, seperti:",
+        "1. Menyiapkan dokumen yang dibutuhkan, seperti Kartu Tanda Penduduk (KTP) atau paspor untuk penjual individu, atau Sertifikat Registrasi Perusahaan (NIB) untuk penjual perusahaan.",
+        "2. Melakukan verifikasi toko.",
+        "3. Memenuhi persyaratan untuk menjadi Power Merchant atau Power Merchant PRO, seperti:",
+        "   - Skor Performa Toko minimal 80 poin.",
+        "   - Minimal menyelesaikan 3 pesanan dalam 30 hari terakhir.",
+        "   - Memiliki pendapatan bersih minimal Rp5.000.000 dalam 30 hari terakhir.",
+        "4. Selain itu, Anda juga perlu:",
+        "   - Mencantumkan nama produk, foto produk, deskripsi produk, dan harga produk yang sesuai.",
+        "   - Membaca dan menyetujui semua isi syarat dan ketentuan Tokopedia.",
+        "   - Menjaga kerahasiaan akun dan password."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "penjelasan_affiliate_tokopedia",
+      "patterns": ["Apa itu affiliate tokopedia?"],
+      "responses": ["Tokopedia Affiliate adalah program yang memungkinkan pengguna untuk mempromosikan produk Tokopedia dan mendapatkan komisi jika produk tersebut terjual."],
+      "context_set": ""
+    },
+    {
+      "tag": "manfaat_tokopedia",
+      "patterns": ["Apa saja manfaat dari aplikasi tokopedia?"],
+      "responses": [
+        "Melalui pemanfaatan e-commerce www.tokopedia.com, seluruh masyarakat dapat jadi pengguna yang bisa melakukan transaksi jual beli dengan mudah dan cepat, serta pelaku bisnis atau masyarakat dapat mempromosikan barang dagangannya keseluruh penjuru dengan biaya yang sangat minim."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "mitra_tokopedia",
+      "patterns": ["Apa saja mitra yang tergabung dalam tokopedia?"],
+      "responses": [
+        "Mitra yang tergabung dalam Tokopedia meliputi: PT Karsa Inti Tuju Aksara (GoApotik), PT Century Franchisindo Utama (Apotek Online), PT Mensa Medika Investama (Halodoc), PT Medika Komunika Teknologi (KlikDokter), PT Perintis Pelayanan Paripurna (Indoapotek)."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "ubah_nomor_telepon",
+      "patterns": [
+        "Bagaimana cara mengganti nomor telepon di akun saya?",
+        "Nomor saya sudah tidak aktif, bagaimana cara menggantinya?",
+        "Bisakah saya memperbarui nomor HP di Tokopedia?",
+        "Bagaimana cara mengubah nomor telepon terdaftar di akun saya?"
+      ],
+      "responses": [
+        "Untuk mengganti nomor telepon, buka menu 'Pengaturan Akun', pilih 'Nomor Telepon', lalu masukkan nomor baru dan verifikasi dengan kode OTP.",
+        "Anda bisa memperbarui nomor telepon melalui aplikasi Tokopedia di bagian 'Profil' dan ikuti langkah verifikasi."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "pengembalian_dana",
+      "patterns": ["Berapa lama proses refund di Tokopedia?", "Kenapa pengembalian uang saya belum masuk?", "Bagaimana cara meminta refund untuk pesanan saya?", "Apakah refund akan langsung masuk ke rekening saya?"],
+      "responses": [
+        "Proses refund di Tokopedia biasanya memerlukan waktu 1-7 hari kerja tergantung metode pembayaran Anda.",
+        "Dana refund akan dikembalikan sesuai metode pembayaran yang Anda gunakan, seperti saldo Tokopedia atau rekening bank."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "gratis_ongkir",
+      "patterns": ["Bagaimana cara mendapatkan gratis ongkir di Tokopedia?", "Apakah ada promo bebas ongkir di Tokopedia?", "Apa syarat dan ketentuan untuk mendapatkan gratis ongkir?", "Produk apa saja yang bisa mendapatkan bebas ongkir?"],
+      "responses": [
+        "Anda bisa mendapatkan gratis ongkir dengan menggunakan voucher tertentu pada produk yang memenuhi syarat, biasanya tersedia di halaman promo.",
+        "Promo bebas ongkir berlaku untuk produk dari toko yang berpartisipasi, dengan minimum pembelian tertentu. Cek syaratnya di detail voucher."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "masalah_pengiriman",
+      "patterns": [
+        "Kenapa barang saya belum sampai padahal sudah melewati estimasi?",
+        "Bagaimana cara melaporkan masalah pengiriman?",
+        "Apa yang harus dilakukan jika pesanan saya hilang dalam perjalanan?",
+        "Kenapa status pengiriman tidak berubah selama beberapa hari?"
+      ],
+      "responses": [
+        "Jika pengiriman terlambat atau bermasalah, Anda bisa menghubungi jasa ekspedisi terkait atau laporkan melalui fitur 'Bantuan' di Tokopedia.",
+        "Laporkan masalah pengiriman dengan memilih pesanan di menu 'Pembelian', lalu klik 'Ajukan Komplain' untuk mendapatkan bantuan lebih lanjut."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "promo_cashback",
+      "patterns": ["Bagaimana cara mendapatkan cashback di Tokopedia?", "Apakah semua produk bisa mendapatkan cashback?", "Dimana saya bisa melihat saldo cashback saya?", "Kenapa saya tidak menerima cashback setelah pembelian?"],
+      "responses": [
+        "Anda bisa mendapatkan cashback dengan menggunakan voucher yang berlaku untuk produk tertentu. Cek syarat dan ketentuannya di halaman promo.",
+        "Saldo cashback dapat dilihat di menu 'Saldo Tokopedia'. Jika belum masuk, pastikan transaksi memenuhi syarat promo."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "kendala_akun_diblokir",
+      "patterns": ["Kenapa akun saya diblokir?", "Apa yang harus dilakukan jika akun saya terkunci?", "Bagaimana cara membuka blokir akun saya di Tokopedia?", "Saya tidak bisa login, apakah akun saya terblokir?"],
+      "responses": [
+        "Akun Anda mungkin diblokir karena pelanggaran kebijakan. Silakan hubungi layanan pelanggan untuk mendapatkan penjelasan lebih lanjut.",
+        "Untuk membuka blokir akun, Anda bisa mengajukan permohonan melalui menu 'Bantuan' atau kirim email ke support Tokopedia."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "cek_riwayat_transaksi",
+      "patterns": ["Bagaimana cara melihat riwayat pembelian saya?", "Dimana saya bisa menemukan daftar transaksi saya di Tokopedia?", "Bisakah saya mengunduh laporan transaksi saya?", "Apa ada fitur untuk memeriksa histori pesanan?"],
+      "responses": ["Anda bisa melihat riwayat transaksi di menu 'Pembelian', di mana semua detail pesanan Anda tercatat.", "Untuk mengunduh laporan transaksi, Anda bisa menggunakan fitur ekspor data yang tersedia di aplikasi Tokopedia."],
+      "context_set": ""
+    },
+    {
+      "tag": "update_aplikasi",
+      "patterns": [
+        "Bagaimana cara memperbarui aplikasi Tokopedia ke versi terbaru?",
+        "Kenapa aplikasi saya tidak bisa diupdate?",
+        "Apakah saya harus memperbarui aplikasi untuk menggunakan fitur baru?",
+        "Dimana saya bisa mendapatkan update aplikasi Tokopedia?"
+      ],
+      "responses": [
+        "Anda bisa memperbarui aplikasi melalui Google Play Store atau App Store, pastikan perangkat Anda memiliki cukup ruang penyimpanan.",
+        "Jika ada kendala dalam update, coba hapus cache aplikasi atau periksa koneksi internet Anda."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "ubah_alamat_pengiriman",
+      "patterns": [
+        "Bagaimana cara mengganti alamat pengiriman saya?",
+        "Bisakah saya mengubah alamat setelah melakukan pemesanan?",
+        "Saya salah memasukkan alamat, bagaimana cara memperbaikinya?",
+        "Apakah alamat pengiriman bisa diperbarui setelah checkout?"
+      ],
+      "responses": [
+        "Alamat pengiriman bisa diubah sebelum pembayaran dilakukan melalui menu 'Alamat Pengiriman' di halaman checkout.",
+        "Jika pesanan sudah dibuat, Anda dapat menghubungi penjual melalui fitur chat untuk meminta perubahan alamat."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "pembelian_preorder",
+      "patterns": ["Apa itu produk preorder di Tokopedia?", "Bagaimana cara membeli barang preorder?", "Kenapa pesanan preorder saya belum dikirim?", "Apakah barang preorder memiliki waktu pengiriman yang berbeda?"],
+      "responses": [
+        "Produk preorder adalah barang yang memerlukan waktu tambahan sebelum dikirim. Periksa estimasi waktu pengiriman pada detail produk.",
+        "Untuk membeli produk preorder, cukup tambahkan ke keranjang dan lakukan pembayaran seperti biasa. Pengiriman akan dilakukan setelah barang tersedia."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "status_refund",
+      "patterns": [
+        "Kenapa status refund saya masih pending?",
+        "Bagaimana cara mengetahui status pengembalian dana saya?",
+        "Apa yang harus saya lakukan jika refund saya tertunda?",
+        "Berapa lama biasanya status refund berubah menjadi berhasil?"
+      ],
+      "responses": [
+        "Status refund bisa dicek di menu 'Pembelian' pada pesanan yang terkait. Jika masih pending, harap tunggu proses verifikasi.",
+        "Pengembalian dana biasanya memakan waktu hingga 7 hari kerja, tergantung metode pembayaran yang digunakan."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "laporan_penjual",
+      "patterns": [
+        "Bagaimana cara melaporkan penjual yang tidak jujur?",
+        "Saya ingin melaporkan toko yang menjual barang palsu, bagaimana caranya?",
+        "Apakah saya bisa memberikan laporan negatif untuk penjual?",
+        "Kenapa penjual tidak merespons saya, apakah bisa dilaporkan?"
+      ],
+      "responses": [
+        "Anda dapat melaporkan penjual melalui fitur 'Laporkan Penjual' pada halaman toko atau produk. Berikan detail masalah yang Anda alami.",
+        "Untuk masalah serius seperti produk palsu, ajukan laporan melalui menu 'Bantuan' dan lampirkan bukti pendukung."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "fitur_langganan",
+      "patterns": ["Apa itu fitur langganan di Tokopedia?", "Bagaimana cara berlangganan produk tertentu?", "Apakah saya bisa membatalkan langganan saya?", "Apa keuntungan menggunakan fitur langganan di Tokopedia?"],
+      "responses": [
+        "Fitur langganan memungkinkan Anda membeli produk secara otomatis dalam jangka waktu tertentu. Aktifkan langganan di halaman produk yang mendukung.",
+        "Langganan dapat dibatalkan kapan saja melalui menu 'Langganan Saya' di aplikasi."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "buka_toko",
+      "patterns": ["Bagaimana cara membuka toko di Tokopedia?", "Apa saja persyaratan untuk menjadi penjual di Tokopedia?", "Bisakah saya menjual produk tanpa dokumen resmi?", "Apa keuntungan menjadi penjual di Tokopedia?"],
+      "responses": [
+        "Untuk membuka toko, klik menu 'Buka Toko' di aplikasi, isi informasi yang diminta, dan ikuti langkah-langkah verifikasi.",
+        "Menjadi penjual di Tokopedia memungkinkan Anda menjangkau lebih banyak pembeli dan menikmati fitur seperti statistik penjualan."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "promo_flash_sale",
+      "patterns": ["Apa itu flash sale di Tokopedia?", "Bagaimana cara mengikuti promo flash sale?", "Apakah semua barang tersedia di flash sale?", "Kenapa produk flash sale habis begitu cepat?"],
+      "responses": ["Flash sale adalah promo terbatas dengan diskon besar dalam waktu singkat. Anda bisa melihat jadwalnya di halaman promo.", "Pastikan Anda checkout secepat mungkin karena barang flash sale memiliki stok terbatas."],
+      "context_set": ""
+    },
+    {
+      "tag": "penarikan_saldo",
+      "patterns": ["Bagaimana cara menarik saldo Tokopedia ke rekening saya?", "Berapa lama proses pencairan saldo ke bank?", "Apakah ada biaya penarikan saldo?", "Kenapa saldo saya tidak bisa ditarik?"],
+      "responses": [
+        "Saldo dapat ditarik melalui menu 'Saldo Tokopedia'. Masukkan informasi rekening Anda dan ikuti instruksi yang diberikan.",
+        "Proses pencairan biasanya memakan waktu 1-2 hari kerja. Pastikan informasi rekening sudah benar."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "pembayaran_cod",
+      "patterns": ["Apakah Tokopedia mendukung pembayaran COD?", "Bagaimana cara memilih metode pembayaran COD?", "Apa syarat untuk menggunakan COD di Tokopedia?", "Kenapa opsi COD tidak muncul di checkout saya?"],
+      "responses": [
+        "Pembayaran COD tersedia untuk produk tertentu dari toko yang mendukung. Pilih metode COD saat checkout jika tersedia.",
+        "Pastikan alamat pengiriman Anda mendukung layanan COD. Cek informasi pada detail produk sebelum membeli."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "masalah_produk",
+      "patterns": [
+        "Kenapa barang yang saya terima tidak sesuai deskripsi?",
+        "Bagaimana cara mengajukan komplain untuk produk cacat?",
+        "Apakah saya bisa meminta penggantian barang yang rusak?",
+        "Saya menerima produk yang salah, apa yang harus saya lakukan?",
+        "Apakah saya bisa mengembalikan barang yang tidak cocok?",
+        "Kenapa barang yang saya terima berbeda dengan foto?",
+        "Bagaimana cara melaporkan penjual yang salah kirim barang?"
+      ],
+      "responses": [
+        "Ajukan komplain melalui menu 'Pembelian', pilih pesanan terkait, dan gunakan opsi 'Ajukan Komplain'.",
+        "Jika barang tidak sesuai, Anda dapat meminta pengembalian atau penggantian produk dengan menyertakan bukti berupa foto atau video."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "topup_saldo",
+      "patterns": ["Bagaimana cara top-up saldo Tokopedia?", "Apakah saya bisa menambah saldo Tokopedia melalui transfer bank?", "Bisakah top-up saldo menggunakan kartu kredit?", "Berapa minimal top-up saldo di Tokopedia?"],
+      "responses": [
+        "Top-up saldo Tokopedia dapat dilakukan melalui transfer bank, e-wallet, atau kartu kredit. Pilih opsi 'Isi Saldo' di menu Saldo Tokopedia.",
+        "Minimal top-up saldo biasanya Rp10.000. Cek panduan lengkap di aplikasi untuk metode pembayaran yang tersedia."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "penggunaan_ovo",
+      "patterns": [
+        "Bagaimana cara menghubungkan akun OVO saya dengan Tokopedia?",
+        "Apakah saya bisa membayar dengan OVO di Tokopedia?",
+        "Kenapa saldo OVO saya tidak bisa digunakan untuk pembayaran?",
+        "Apa keuntungan menggunakan OVO di Tokopedia?"
+      ],
+      "responses": [
+        "Hubungkan akun OVO Anda dengan Tokopedia melalui menu pembayaran. Pastikan nomor telepon Anda sama pada kedua platform.",
+        "Keuntungan menggunakan OVO termasuk cashback eksklusif dan kemudahan pembayaran langsung di aplikasi Tokopedia."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "produk_digital",
+      "patterns": [
+        "Apa saja produk digital yang bisa saya beli di Tokopedia?",
+        "Bagaimana cara membeli pulsa di Tokopedia?",
+        "Apakah saya bisa membayar tagihan listrik melalui Tokopedia?",
+        "Berapa lama produk digital diterima setelah pembayaran?"
+      ],
+      "responses": [
+        "Produk digital seperti pulsa, token listrik, dan voucher game tersedia di Tokopedia. Pilih kategori 'Produk Digital' di menu utama.",
+        "Produk digital biasanya langsung diterima setelah pembayaran berhasil. Jika ada kendala, laporkan melalui menu 'Bantuan'."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "ubah_email_akun",
+      "patterns": [
+        "Bagaimana cara mengganti email yang terdaftar di Tokopedia?",
+        "Apakah saya bisa mengubah email saya tanpa kehilangan data akun?",
+        "Kenapa email baru saya tidak bisa diverifikasi?",
+        "Apa langkah-langkah untuk memperbarui alamat email di akun Tokopedia?"
+      ],
+      "responses": [
+        "Anda dapat mengganti email melalui menu 'Pengaturan Akun', pilih opsi 'Ubah Email', dan ikuti langkah verifikasi dengan email baru.",
+        "Pastikan email baru Anda belum terdaftar di Tokopedia dan cek folder spam untuk kode verifikasi jika belum diterima."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "batasan_pembelian",
+      "patterns": [
+        "Kenapa saya tidak bisa membeli lebih dari satu produk?",
+        "Apakah ada batas maksimal pembelian di Tokopedia?",
+        "Bagaimana cara membeli dalam jumlah besar di Tokopedia?",
+        "Kenapa pesanan saya dibatalkan karena melebihi batas pembelian?"
+      ],
+      "responses": [
+        "Beberapa produk memiliki batas maksimal pembelian per pengguna, terutama untuk promo tertentu. Periksa detail produk untuk informasi lebih lanjut.",
+        "Untuk pembelian dalam jumlah besar, Anda bisa menghubungi penjual melalui fitur chat untuk mengatur pemesanan."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "kode_otp",
+      "patterns": ["Kenapa saya tidak menerima kode OTP untuk login?", "Apa yang harus saya lakukan jika kode OTP tidak masuk?", "Bagaimana cara mendapatkan kembali kode OTP saya?", "Kenapa kode OTP saya selalu gagal digunakan?"],
+      "responses": [
+        "Jika kode OTP tidak diterima, pastikan nomor telepon Anda aktif dan memiliki sinyal. Coba kirim ulang kode atau gunakan metode lain seperti email.",
+        "Kode OTP hanya berlaku beberapa menit. Pastikan Anda memasukkannya dengan benar sebelum masa berlaku habis."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "klaim_asuransi_pengiriman",
+      "patterns": [
+        "Bagaimana cara klaim asuransi pengiriman jika barang saya rusak?",
+        "Apakah saya perlu dokumen untuk mengklaim asuransi pengiriman?",
+        "Berapa lama proses klaim asuransi di Tokopedia?",
+        "Apa yang harus dilakukan jika barang hilang dalam perjalanan?"
+      ],
+      "responses": [
+        "Untuk klaim asuransi pengiriman, ajukan laporan melalui menu 'Pembelian', pilih 'Ajukan Komplain', dan sertakan dokumen seperti foto barang dan bukti pembelian.",
+        "Proses klaim asuransi memerlukan waktu 7-14 hari kerja setelah dokumen diterima."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "biaya_admin",
+      "patterns": ["Kenapa ada biaya admin pada transaksi saya?", "Apakah semua metode pembayaran dikenakan biaya admin?", "Bagaimana cara menghindari biaya admin di Tokopedia?", "Berapa besar biaya admin untuk pembayaran tertentu?"],
+      "responses": [
+        "Biaya admin berlaku untuk beberapa metode pembayaran seperti transfer bank atau virtual account. Nominal biaya ditampilkan saat checkout.",
+        "Untuk menghindari biaya admin, gunakan metode pembayaran bebas biaya seperti saldo Tokopedia atau promo tertentu."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "produk_tidak_tersedia",
+      "patterns": [
+        "Kenapa produk yang saya cari tidak tersedia lagi?",
+        "Apakah saya bisa mendapatkan notifikasi jika produk tersedia kembali?",
+        "Bagaimana cara mengetahui kapan produk restock?",
+        "Kenapa toko tiba-tiba menghapus produk dari Tokopedia?"
+      ],
+      "responses": [
+        "Produk yang tidak tersedia biasanya sedang habis stok. Anda bisa mengaktifkan notifikasi restock di halaman produk.",
+        "Jika produk dihapus, penjual mungkin telah menghentikan penjualan atau produk tidak lagi sesuai kebijakan Tokopedia."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "penghapusan_akun",
+      "patterns": ["Bagaimana cara menghapus akun saya di Tokopedia?", "Apakah data saya akan hilang jika akun dihapus?", "Bisakah saya memulihkan akun setelah dihapus?", "Apa syarat untuk mengajukan penghapusan akun?"],
+      "responses": [
+        "Untuk menghapus akun, hubungi layanan pelanggan Tokopedia melalui email atau menu 'Bantuan'. Anda akan diminta konfirmasi tambahan.",
+        "Setelah akun dihapus, data Anda tidak dapat dipulihkan. Pastikan untuk mencadangkan informasi penting sebelum melanjutkan."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "penggunaan_voucher",
+      "patterns": ["Bagaimana cara menggunakan voucher di Tokopedia?", "Kenapa voucher saya tidak bisa digunakan?", "Apakah ada syarat untuk menggunakan voucher?", "Bagaimana mengetahui voucher yang berlaku untuk pembelian saya?"],
+      "responses": [
+        "Voucher dapat digunakan di halaman checkout dengan memasukkan kode voucher atau memilih dari daftar yang tersedia.",
+        "Pastikan voucher sesuai dengan syarat dan ketentuan, seperti minimum pembelian atau kategori produk tertentu."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "batas_waktu_pembayaran",
+      "patterns": [
+        "Berapa lama batas waktu untuk menyelesaikan pembayaran?",
+        "Apa yang terjadi jika saya melewati batas waktu pembayaran?",
+        "Kenapa pesanan saya dibatalkan karena pembayaran terlambat?",
+        "Bagaimana memperpanjang waktu pembayaran di Tokopedia?"
+      ],
+      "responses": [
+        "Batas waktu pembayaran biasanya 24 jam setelah pesanan dibuat. Pesanan akan dibatalkan otomatis jika pembayaran tidak dilakukan.",
+        "Untuk promo tertentu, batas waktu mungkin lebih singkat. Cek detail pembayaran pada halaman checkout."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "status_pengiriman",
+      "patterns": ["Bagaimana cara melacak status pengiriman pesanan saya?", "Kenapa status pengiriman tidak berubah?", "Berapa lama biasanya pengiriman selesai?", "Apa yang harus saya lakukan jika pengiriman terlambat?"],
+      "responses": [
+        "Status pengiriman bisa dilacak melalui menu 'Pembelian', pilih pesanan Anda, lalu klik 'Lacak Paket'.",
+        "Jika status tidak berubah selama lebih dari 2 hari kerja, Anda bisa menghubungi jasa pengiriman atau mengajukan komplain ke penjual."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "produk_rusak",
+      "patterns": [
+        "Apa yang harus saya lakukan jika barang yang saya terima rusak?",
+        "Bisakah saya mendapatkan penggantian untuk barang rusak?",
+        "Bagaimana cara mengajukan komplain barang rusak?",
+        "Berapa lama proses penggantian barang yang rusak?"
+      ],
+      "responses": [
+        "Ajukan komplain melalui menu 'Pembelian', pilih pesanan terkait, lalu klik 'Ajukan Komplain'. Lampirkan bukti berupa foto atau video barang rusak.",
+        "Proses penggantian barang biasanya memakan waktu 7-14 hari kerja tergantung pada kebijakan penjual."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "transfer_poin",
+      "patterns": ["Bisakah saya mentransfer poin saya ke akun lain?", "Bagaimana cara menggunakan poin untuk diskon?", "Kenapa poin saya tidak bertambah setelah belanja?", "Apakah poin memiliki masa berlaku?"],
+      "responses": [
+        "Poin tidak bisa ditransfer ke akun lain, namun dapat digunakan untuk mendapatkan diskon saat checkout.",
+        "Poin memiliki masa berlaku yang dapat dilihat di menu 'Poin Saya'. Gunakan sebelum kedaluwarsa untuk menghindari kehilangan poin."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "ubah_metode_pembayaran",
+      "patterns": [
+        "Bagaimana cara mengganti metode pembayaran setelah checkout?",
+        "Kenapa saya tidak bisa mengubah metode pembayaran?",
+        "Apakah saya bisa menggunakan dua metode pembayaran sekaligus?",
+        "Apa yang harus saya lakukan jika metode pembayaran tidak tersedia?"
+      ],
+      "responses": [
+        "Metode pembayaran hanya bisa diubah sebelum transaksi selesai. Pilih opsi 'Ubah Metode Pembayaran' di halaman pembayaran.",
+        "Jika metode tidak tersedia, coba metode lain seperti saldo Tokopedia, transfer bank, atau kartu kredit."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "klaim_garansi",
+      "patterns": ["Bagaimana cara mengklaim garansi barang saya?", "Apa saja syarat untuk klaim garansi?", "Berapa lama proses klaim garansi di Tokopedia?", "Apakah saya perlu menghubungi penjual untuk klaim garansi?"],
+      "responses": ["Klaim garansi dapat diajukan melalui menu 'Pembelian', pilih pesanan terkait, lalu ikuti petunjuk klaim garansi.", "Pastikan Anda menyimpan kartu garansi dan bukti pembelian sebagai dokumen pendukung."],
+      "context_set": ""
+    },
+    {
+      "tag": "penggunaan_kartu_kredit",
+      "patterns": ["Bagaimana cara menambahkan kartu kredit di Tokopedia?", "Kenapa kartu kredit saya ditolak?", "Apakah saya bisa menyimpan lebih dari satu kartu kredit?", "Apakah ada promo khusus untuk pembayaran dengan kartu kredit?"],
+      "responses": [
+        "Tambahkan kartu kredit melalui menu 'Metode Pembayaran'. Pastikan informasi yang dimasukkan sesuai dengan data kartu Anda.",
+        "Tokopedia sering menawarkan promo eksklusif untuk pengguna kartu kredit tertentu. Cek halaman promo untuk detailnya."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "notifikasi_tidak_masuk",
+      "patterns": ["Kenapa saya tidak menerima notifikasi pesanan?", "Apa yang harus saya lakukan jika notifikasi tidak muncul?", "Bagaimana cara mengaktifkan notifikasi di Tokopedia?", "Kenapa pemberitahuan saya selalu terlambat?"],
+      "responses": ["Pastikan Anda sudah mengaktifkan notifikasi untuk aplikasi Tokopedia di pengaturan perangkat Anda.", "Jika notifikasi masih tidak muncul, coba perbarui aplikasi ke versi terbaru atau periksa koneksi internet Anda."],
+      "context_set": ""
+    },
+    {
+      "tag": "penipuan_online",
+      "patterns": [
+        "Apa yang harus saya lakukan jika menjadi korban penipuan di Tokopedia?",
+        "Bisakah saya melaporkan pengguna yang mencoba menipu saya?",
+        "Kenapa ada penjual yang mencurigakan di Tokopedia?",
+        "Apakah saya dijamin aman dari penipuan di Tokopedia?"
+      ],
+      "responses": ["Jika Anda menjadi korban penipuan, laporkan langsung melalui menu 'Laporkan Masalah' di aplikasi.", "Tokopedia memiliki sistem perlindungan pembeli, namun selalu waspada dan hanya bertransaksi melalui platform resmi."],
+      "context_set": ""
+    },
+    {
+      "tag": "komplain_produk_hilang",
+      "patterns": [
+        "Bagaimana jika barang saya hilang dalam perjalanan?",
+        "Apakah saya bisa mengklaim penggantian untuk barang hilang?",
+        "Kenapa status pengiriman saya menunjukkan barang tidak ditemukan?",
+        "Apa yang harus dilakukan jika barang tidak sampai?"
+      ],
+      "responses": ["Jika barang hilang, segera ajukan komplain melalui menu 'Pembelian'. Pilih pesanan terkait, lalu klik 'Ajukan Komplain'.", "Tokopedia akan membantu menyelesaikan masalah dengan jasa pengiriman dan penjual."],
+      "context_set": ""
+    },
+    {
+      "tag": "promo_tidak_berlaku",
+      "patterns": ["Kenapa promo tidak berlaku untuk pembelian saya?", "Apakah ada syarat khusus untuk menggunakan promo?", "Bagaimana cara memastikan promo saya aktif?", "Kenapa promo saya hilang setelah checkout?"],
+      "responses": [
+        "Promo biasanya memiliki syarat seperti minimum pembelian atau kategori produk tertentu. Cek syarat promo di halaman 'Promo Saya'.",
+        "Jika promo tidak aktif, pastikan Anda memenuhi syarat dan batas waktu promo belum habis."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "masalah_login",
+      "patterns": ["Kenapa saya tidak bisa login ke akun saya?", "Bagaimana jika saya lupa password?", "Kenapa akun saya terkunci?", "Apa yang harus dilakukan jika saya lupa email untuk login?"],
+      "responses": ["Jika lupa password, gunakan fitur 'Lupa Password' untuk mengatur ulang. Pastikan email Anda aktif.", "Jika akun terkunci, tunggu 30 menit atau hubungi layanan pelanggan untuk bantuan lebih lanjut."],
+      "context_set": ""
+    },
+    {
+      "tag": "penipuan_review",
+      "patterns": ["Kenapa ada ulasan palsu di toko ini?", "Bagaimana melaporkan ulasan palsu?", "Apakah ulasan penjual diverifikasi?", "Bagaimana memastikan ulasan produk asli?"],
+      "responses": [
+        "Ulasan di Tokopedia berasal dari pembeli yang telah melakukan transaksi. Jika menemukan ulasan mencurigakan, laporkan melalui opsi 'Laporkan'.",
+        "Kami berusaha menjaga keaslian ulasan dengan memverifikasi pembelian sebelum ulasan diterbitkan."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "metode_pengiriman",
+      "patterns": ["Kenapa metode pengiriman saya tidak tersedia?", "Apa saja opsi pengiriman yang didukung?", "Bagaimana memilih pengiriman dengan ongkir murah?", "Apakah pengiriman bisa diatur jadwalnya?"],
+      "responses": ["Metode pengiriman tergantung lokasi dan layanan kurir. Pastikan alamat sudah benar untuk melihat opsi pengiriman.", "Untuk pengiriman murah, pilih kurir yang menawarkan promo ongkir di wilayah Anda."],
+      "context_set": ""
+    },
+    {
+      "tag": "pembatalan_pesanan",
+      "patterns": ["Bagaimana cara membatalkan pesanan saya?", "Apakah ada biaya untuk pembatalan pesanan?", "Kenapa pesanan saya tidak bisa dibatalkan?", "Apakah pembatalan langsung mengembalikan uang saya?"],
+      "responses": [
+        "Pembatalan dapat dilakukan sebelum penjual memproses pesanan. Gunakan fitur 'Batalkan Pesanan' di menu pembelian.",
+        "Jika pembatalan berhasil, pengembalian dana biasanya diproses dalam 1-3 hari kerja tergantung metode pembayaran."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "penundaan_promo",
+      "patterns": ["Kenapa promo yang dijanjikan tidak muncul?", "Bagaimana jika promo saya tiba-tiba menghilang?", "Apakah ada waktu tertentu untuk promo aktif?", "Kenapa kode promo tidak valid?"],
+      "responses": ["Promo bisa tergantung waktu dan jumlah kuota. Pastikan Anda menggunakan promo sesuai syarat dan ketentuan.", "Jika promo hilang, coba periksa halaman promo untuk memastikan kode masih berlaku."],
+      "context_set": ""
+    },
+    {
+      "tag": "update_data_bank",
+      "patterns": ["Bagaimana cara mengganti rekening bank saya?", "Kenapa data rekening saya tidak bisa diupdate?", "Apakah rekening lama saya tetap tercatat setelah diganti?", "Apakah perlu verifikasi ulang untuk rekening baru?"],
+      "responses": [
+        "Anda dapat mengganti rekening bank melalui menu 'Pengaturan Akun'. Data baru perlu diverifikasi sebelum digunakan.",
+        "Rekening lama tidak akan digunakan setelah diganti, namun tetap tercatat untuk keperluan histori transaksi."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "pengembalian_barang",
+      "patterns": ["Bagaimana cara mengembalikan barang yang saya beli?", "Apa syarat untuk pengembalian barang?", "Kenapa pengajuan pengembalian barang saya ditolak?", "Berapa lama waktu untuk proses pengembalian barang?"],
+      "responses": ["Pengembalian barang dapat diajukan melalui menu 'Pembelian'. Pastikan memenuhi syarat seperti barang dalam kondisi baik.", "Proses pengembalian biasanya memakan waktu 7-14 hari kerja tergantung penjual."],
+      "context_set": ""
+    },
+    {
+      "tag": "klaim_pengiriman_cepat",
+      "patterns": ["Kenapa pengiriman cepat saya terlambat?", "Bagaimana cara klaim garansi pengiriman cepat?", "Apakah ada kompensasi jika pengiriman cepat tidak tepat waktu?", "Kenapa estimasi pengiriman saya berubah?"],
+      "responses": ["Jika pengiriman cepat terlambat, Anda dapat mengajukan klaim melalui menu 'Pengiriman'.", "Kompensasi tergantung pada kebijakan kurir dan layanan pengiriman yang digunakan."],
+      "context_set": ""
+    },
+    {
+      "tag": "masalah_aplikasi",
+      "patterns": ["Kenapa aplikasi Tokopedia saya error?", "Apa yang harus saya lakukan jika aplikasi terus crash?", "Bagaimana cara memperbarui aplikasi Tokopedia?", "Kenapa saya tidak bisa membuka aplikasi?"],
+      "responses": [
+        "Coba perbarui aplikasi ke versi terbaru di Play Store atau App Store. Jika masalah berlanjut, hubungi layanan pelanggan.",
+        "Pastikan juga koneksi internet Anda stabil dan perangkat memiliki ruang penyimpanan yang cukup."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "masalah_cashback",
+      "patterns": ["Kenapa cashback saya belum masuk?", "Berapa lama waktu proses cashback?", "Apakah cashback bisa digunakan untuk pembayaran selanjutnya?", "Bagaimana cara mengecek saldo cashback saya?"],
+      "responses": ["Cashback biasanya diproses dalam waktu 1-7 hari kerja setelah transaksi selesai. Cek saldo cashback di menu 'Keuangan'.", "Cashback dapat digunakan untuk transaksi berikutnya sesuai syarat dan ketentuan yang berlaku."],
+      "context_set": ""
+    },
+    {
+      "tag": "masalah_retur_barang",
+      "patterns": ["Kenapa barang yang saya retur belum diterima penjual?", "Apakah saya bisa mengajukan retur tanpa bukti pembelian?", "Bagaimana cara mengecek status retur barang saya?", "Berapa lama waktu proses retur barang?"],
+      "responses": ["Status retur dapat dilihat di menu 'Retur Saya'. Retur biasanya diproses dalam 7-14 hari kerja.", "Bukti pembelian diperlukan untuk memastikan barang yang diretur sesuai dengan pesanan Anda."],
+      "context_set": ""
+    },
+    {
+      "tag": "kebijakan_garansi_produk",
+      "patterns": ["Apakah semua produk memiliki garansi?", "Bagaimana cara klaim garansi produk?", "Apa saja syarat untuk klaim garansi?", "Kenapa garansi saya tidak diterima?"],
+      "responses": ["Tidak semua produk memiliki garansi. Periksa informasi garansi di halaman produk.", "Klaim garansi harus memenuhi syarat yang ditentukan oleh penjual atau produsen."],
+      "context_set": ""
+    },
+    {
+      "tag": "masalah_poin_reward",
+      "patterns": ["Kenapa saya tidak mendapatkan poin reward?", "Bagaimana cara menukarkan poin reward?", "Apakah poin reward bisa kadaluarsa?", "Berapa poin yang diperlukan untuk penukaran voucher?"],
+      "responses": ["Poin reward diberikan untuk transaksi tertentu. Periksa syarat poin di halaman 'Keuntungan Saya'.", "Poin reward memiliki masa berlaku tertentu. Gunakan sebelum masa berlaku habis."],
+      "context_set": ""
+    },
+    {
+      "tag": "perubahan_harga_produk",
+      "patterns": ["Kenapa harga produk tiba-tiba naik?", "Apakah harga bisa berubah setelah masuk ke keranjang?", "Kenapa ada perbedaan harga di aplikasi dan website?", "Apakah saya bisa meminta penyesuaian harga?"],
+      "responses": ["Harga produk dapat berubah sewaktu-waktu sesuai kebijakan penjual atau promo yang berlaku.", "Penyesuaian harga tidak dapat dilakukan. Pastikan menyelesaikan pembayaran segera untuk mengamankan harga."],
+      "context_set": ""
+    },
+    {
+      "tag": "verifikasi_akun",
+      "patterns": ["Bagaimana cara verifikasi akun Tokopedia?", "Kenapa saya diminta verifikasi identitas?", "Apakah verifikasi identitas wajib?", "Berapa lama proses verifikasi akun?"],
+      "responses": ["Verifikasi akun dilakukan melalui menu 'Pengaturan Akun'. Proses ini diperlukan untuk keamanan transaksi.", "Proses verifikasi biasanya memakan waktu 1-2 hari kerja."],
+      "context_set": ""
+    },
+    {
+      "tag": "masalah_kupon",
+      "patterns": ["Kenapa kupon saya tidak bisa digunakan?", "Bagaimana cara mendapatkan kupon diskon?", "Apakah kupon bisa digunakan untuk semua produk?", "Bagaimana cara mengecek masa berlaku kupon?"],
+      "responses": ["Kupon biasanya memiliki syarat khusus, seperti kategori produk atau minimum pembelian.", "Masa berlaku kupon dapat dilihat di menu 'Kupon Saya'."],
+      "context_set": ""
+    },
+    {
+      "tag": "promo_khusus_member",
+      "patterns": ["Apakah ada promo khusus untuk member premium?", "Bagaimana cara menjadi member premium?", "Apa keuntungan menjadi member premium?", "Kenapa promo khusus member tidak muncul di akun saya?"],
+      "responses": ["Member premium mendapatkan keuntungan seperti promo eksklusif dan prioritas layanan. Daftar melalui menu 'Keanggotaan'.", "Promo khusus member hanya berlaku untuk akun yang sudah aktif sebagai member premium."],
+      "context_set": ""
+    },
+    {
+      "tag": "masalah_topup",
+      "patterns": ["Kenapa saldo top-up saya belum masuk?", "Bagaimana cara memastikan top-up berhasil?", "Berapa lama waktu proses top-up saldo?", "Kenapa top-up saya gagal?"],
+      "responses": ["Saldo top-up biasanya masuk dalam beberapa menit. Jika belum masuk, periksa status di menu 'Transaksi Saya'.", "Jika top-up gagal, pastikan metode pembayaran Anda valid dan saldo mencukupi."],
+      "context_set": ""
+    },
+    {
+      "tag": "masalah_faktur",
+      "patterns": ["Bagaimana cara mendapatkan faktur untuk pesanan saya?", "Kenapa faktur saya belum tersedia?", "Apakah saya bisa meminta faktur ulang?", "Apakah semua pesanan mendapatkan faktur?"],
+      "responses": ["Faktur dapat diunduh dari menu 'Detail Pesanan' jika disediakan oleh penjual.", "Tidak semua pesanan menyediakan faktur. Anda dapat menghubungi penjual untuk memintanya."],
+      "context_set": ""
+    },
+    {
+      "tag": "masalah_pembayaran_cicilan",
+      "patterns": ["Bagaimana cara membayar cicilan saya?", "Kenapa tagihan cicilan saya tidak muncul?", "Apakah ada denda jika terlambat membayar cicilan?", "Bagaimana cara mengecek jadwal cicilan?"],
+      "responses": ["Pembayaran cicilan dapat dilakukan melalui menu 'Keuangan Saya'. Pastikan pembayaran tepat waktu untuk menghindari denda.", "Jadwal cicilan dan tagihan dapat dilihat di halaman 'Detail Cicilan'."],
+      "context_set": ""
+    },
+    {
+      "tag": "pembatalan_otomatis",
+      "patterns": ["Kenapa pesanan saya dibatalkan otomatis?", "Bagaimana cara mencegah pembatalan otomatis?", "Apakah pesanan yang dibatalkan otomatis bisa diproses ulang?", "Kenapa pesanan saya tidak bisa diteruskan?"],
+      "responses": [
+        "Pesanan dapat dibatalkan otomatis jika tidak menyelesaikan pembayaran sesuai batas waktu. Pastikan segera menyelesaikan pembayaran.",
+        "Pesanan yang dibatalkan otomatis tidak dapat diproses ulang. Silakan membuat pesanan baru."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "masalah_email_verifikasi",
+      "patterns": ["Kenapa saya tidak menerima email verifikasi?", "Bagaimana cara meminta ulang email verifikasi?", "Apakah saya bisa mengganti email untuk verifikasi?", "Kenapa email verifikasi saya selalu gagal?"],
+      "responses": ["Pastikan email Anda aktif dan periksa folder spam atau junk. Anda dapat mengirim ulang email verifikasi dari menu 'Pengaturan Akun'.", "Jika masalah berlanjut, coba gunakan email lain dan pastikan formatnya benar."],
+      "context_set": ""
+    },
+    {
+      "tag": "biaya_pengiriman_berbeda",
+      "patterns": ["Kenapa biaya pengiriman berbeda dari yang tertera?", "Apakah biaya pengiriman tergantung lokasi?", "Bagaimana cara memastikan biaya pengiriman benar?", "Kenapa biaya pengiriman bertambah saat checkout?"],
+      "responses": ["Biaya pengiriman tergantung lokasi dan berat produk. Pastikan alamat sudah benar saat menghitung biaya.", "Biaya dapat bertambah jika ada layanan tambahan seperti asuransi atau pengemasan khusus."],
+      "context_set": ""
+    },
+    {
+      "tag": "pengiriman_cepat",
+      "patterns": ["Apakah ada opsi pengiriman cepat?", "Bagaimana cara memilih pengiriman dengan durasi tercepat?", "Kenapa pengiriman saya lambat padahal memilih opsi cepat?", "Apakah pengiriman cepat lebih mahal?"],
+      "responses": ["Opsi pengiriman cepat tersedia untuk beberapa produk dan lokasi. Periksa pilihan kurir saat checkout.", "Biaya pengiriman cepat biasanya lebih tinggi, tetapi waktu pengiriman lebih singkat."],
+      "context_set": ""
+    },
+    {
+      "tag": "masalah_pembayaran",
+      "patterns": ["Kenapa pembayaran saya gagal?", "Apa saja metode pembayaran yang tersedia di Tokopedia?", "Berapa lama waktu proses pembayaran menggunakan transfer bank?"],
+      "responses": [
+        "Pastikan saldo atau metode pembayaran Anda valid. Anda dapat mencoba ulang atau menggunakan metode lain.",
+        "Metode pembayaran yang tersedia meliputi transfer bank, e-wallet, kartu kredit, dan lainnya.",
+        "Pembayaran melalui transfer bank biasanya diproses dalam 1-2 jam."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "produk",
+      "patterns": ["Apakah produk ini asli?", "Kenapa produk yang saya cari sudah tidak tersedia?", "Bagaimana cara bertanya langsung kepada penjual tentang produk?"],
+      "responses": [
+        "Cek deskripsi dan ulasan produk untuk memastikan keasliannya. Anda juga bisa memilih penjual dengan rating tinggi.",
+        "Jika produk tidak tersedia, Anda dapat memanfaatkan fitur 'Notifikasi Stok' jika tersedia.",
+        "Anda dapat menghubungi penjual melalui fitur 'Chat' di halaman produk."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "masalah_teknis",
+      "patterns": ["Kenapa aplikasi Tokopedia tidak bisa dibuka?", "Bagaimana cara memperbarui aplikasi Tokopedia?", "Kenapa website Tokopedia lambat saat digunakan?"],
+      "responses": [
+        "Pastikan aplikasi Anda sudah diperbarui ke versi terbaru dan koneksi internet stabil.",
+        "Perbarui aplikasi melalui Google Play Store atau Apple App Store.",
+        "Jika website lambat, coba gunakan browser lain atau periksa koneksi internet Anda."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "keamanan_akun",
+      "patterns": ["Bagaimana cara melindungi akun saya dari penipuan?", "Apakah Tokopedia aman untuk bertransaksi?", "Apa yang harus saya lakukan jika akun saya diretas?"],
+      "responses": [
+        "Jangan bagikan OTP atau data pribadi kepada siapapun. Aktifkan verifikasi dua langkah untuk keamanan lebih baik.",
+        "Tokopedia menggunakan teknologi enkripsi untuk melindungi data Anda. Pastikan bertransaksi hanya di platform resmi.",
+        "Segera ganti password Anda dan laporkan melalui menu 'Bantuan' jika akun diretas."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "kehilangan_barang",
+      "patterns": ["Apa yang harus saya lakukan jika barang hilang saat pengiriman?", "Siapa yang bertanggung jawab jika barang saya hilang?", "Bagaimana proses klaim kehilangan barang?"],
+      "responses": ["Segera laporkan kehilangan barang melalui menu 'Bantuan' di aplikasi. Tim Tokopedia akan membantu proses klaim.", "Untuk klaim kehilangan, pastikan Anda memiliki bukti pembayaran dan laporan dari kurir."],
+      "context_set": ""
+    },
+    {
+      "tag": "komplain_penjual",
+      "patterns": ["Bagaimana cara mengajukan komplain kepada penjual?", "Apa yang harus saya lakukan jika penjual tidak merespon?", "Apakah saya bisa memberikan ulasan buruk untuk penjual?"],
+      "responses": ["Anda dapat mengajukan komplain melalui fitur 'Chat' atau melaporkan penjual di menu 'Bantuan'.", "Jika penjual tidak merespon, laporkan melalui pusat bantuan Tokopedia agar tim kami dapat membantu."],
+      "context_set": ""
+    },
+    {
+      "tag": "saldo_tokopedia",
+      "patterns": ["Kenapa saldo Tokopedia saya tidak bertambah?", "Bagaimana cara menggunakan saldo Tokopedia?", "Apakah saldo Tokopedia bisa dicairkan ke rekening bank?"],
+      "responses": [
+        "Jika saldo belum bertambah, pastikan transaksi sudah berhasil dan cek riwayat saldo Anda.",
+        "Saldo Tokopedia dapat digunakan untuk pembelian produk di aplikasi atau website Tokopedia.",
+        "Saldo Tokopedia dapat dicairkan ke rekening bank melalui fitur 'Tarik Dana' di menu Saldo."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "pesanan_salah",
+      "patterns": ["Kenapa saya menerima barang yang salah?", "Apa yang harus saya lakukan jika produk yang saya terima tidak sesuai?", "Bagaimana cara melaporkan produk yang salah?"],
+      "responses": ["Jika menerima barang yang salah, ajukan komplain melalui menu 'Pesanan Saya' dan pilih opsi 'Ajukan Komplain'.", "Pastikan Anda melampirkan foto produk yang diterima untuk mempercepat proses penyelesaian masalah."],
+      "context_set": ""
+    },
+    {
+      "tag": "pembatalan_oleh_penjual",
+      "patterns": ["Kenapa pesanan saya dibatalkan oleh penjual?", "Apa yang harus saya lakukan jika pesanan dibatalkan oleh penjual?", "Apakah saya akan mendapatkan pengembalian dana jika pesanan dibatalkan oleh penjual?"],
+      "responses": ["Pesanan bisa dibatalkan oleh penjual jika stok habis atau masalah lain. Dana akan dikembalikan secara otomatis.", "Cek riwayat transaksi untuk memastikan pengembalian dana telah diproses."],
+      "context_set": ""
+    },
+    {
+      "tag": "ongkir_tidak_termasuk",
+      "patterns": ["Kenapa ongkir tidak termasuk dalam total pembayaran?", "Bagaimana cara memastikan ongkir sudah dihitung?", "Kenapa saya dikenakan ongkir meskipun promo gratis ongkir?"],
+      "responses": ["Pastikan Anda memenuhi syarat promo gratis ongkir seperti minimum belanja atau pilihan kurir tertentu.", "Ongkir akan dihitung otomatis di halaman checkout. Jika ada masalah, coba perbarui alamat tujuan."],
+      "context_set": ""
+    },
+    {
+      "tag": "masalah_chat_penjual",
+      "patterns": ["Kenapa penjual tidak membalas chat saya?", "Apa yang harus saya lakukan jika penjual tidak merespon?", "Bagaimana cara memastikan penjual aktif di Tokopedia?"],
+      "responses": ["Penjual mungkin sedang sibuk. Tunggu beberapa waktu atau coba hubungi lagi.", "Jika penjual tidak merespon dalam waktu lama, Anda dapat melaporkan melalui fitur 'Laporkan Penjual'."],
+      "context_set": ""
+    },
+    {
+      "tag": "topup_saldo_gagal",
+      "patterns": ["Kenapa top-up saldo saya gagal?", "Apa yang harus dilakukan jika saldo tidak masuk?", "Kenapa status top-up saya tertunda?"],
+      "responses": ["Cek status transaksi di riwayat saldo Anda. Jika gagal, coba ulangi transaksi atau hubungi customer service.", "Top-up yang tertunda bisa disebabkan oleh gangguan sistem. Tunggu beberapa saat dan periksa kembali."],
+      "context_set": ""
+    },
+    {
+      "tag": "kredit_tokopedia",
+      "patterns": ["Apa itu kredit Tokopedia?", "Bagaimana cara menggunakan kredit Tokopedia?", "Kenapa kredit Tokopedia saya hilang?"],
+      "responses": ["Kredit Tokopedia adalah saldo promosi yang dapat digunakan untuk potongan harga. Cek di menu 'Promo Saya'.", "Kredit Tokopedia memiliki masa berlaku. Pastikan Anda menggunakannya sebelum tanggal kedaluwarsa."],
+      "context_set": ""
+    },
+    {
+      "tag": "masalah_pengisian_alamat",
+      "patterns": ["Kenapa saya tidak bisa menyimpan alamat baru?", "Bagaimana cara menambahkan alamat pengiriman?", "Kenapa alamat saya tidak muncul di pilihan checkout?"],
+      "responses": ["Pastikan format alamat yang dimasukkan sudah benar dan mencakup detail seperti kode pos.", "Alamat baru dapat ditambahkan melalui menu 'Pengaturan Alamat' di profil Anda."],
+      "context_set": ""
+    }
+  ]
+}
