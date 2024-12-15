@@ -1,61 +1,73 @@
 import warnings
 warnings.filterwarnings('ignore')
 
-import json
 import os
-import numpy as np
-import pandas as pd
+import json
 import random
-from transformers import BertTokenizer, BertForSequenceClassification, Trainer, TrainingArguments, pipeline
+import re
+import pandas as pd  # Add this import for pandas
+from flask import Flask, render_template, request, jsonify
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support
-from torch.utils.data import Dataset
-from flask import Flask, request, jsonify, render_template
+from transformers import BertTokenizer, BertForSequenceClassification, Trainer, TrainingArguments
 import torch
+from torch.utils.data import Dataset
 
-# Load the data
+# Flask App Initialization
+app = Flask(__name__)
+
+# Path to the dataset
+json_file = os.path.join(os.path.dirname(__file__), "dataset_chatbot.json")
+
+# Load JSON data
 def load_json_file(filename):
-    with open(filename, encoding='utf-8') as f:
+    with open(filename) as f:
         return json.load(f)
 
-json_file = "C:/Users/Azui-Cz1/Desktop/T/dataset_chatbot.json"  # Update with your actual path
 intents = load_json_file(json_file)
 
-# Validate JSON structure
-if not all('tag' in intent and 'patterns' in intent for intent in intents['intents']):
-    raise ValueError("Invalid JSON structure")
+# Extract info and preprocess data
+def extract_json_info(json_file):
+    patterns, tags = [], []
+    for intent in json_file['intents']:
+        if 'tag' in intent:
+            patterns.extend(intent['patterns'])
+            tags.extend([intent['tag']] * len(intent['patterns']))
+    return pd.DataFrame({'Pattern': patterns, 'Tag': tags})
 
-# Extract Info from the JSON data file and Store it in a dataframe
-df = pd.DataFrame([(pattern.lower(), intent['tag']) for intent in intents['intents'] for pattern in intent['patterns']], 
-                  columns=['Pattern', 'Tag'])
+df = extract_json_info(intents)
+
+# Preprocess pattern text
+def preprocess_pattern(pattern):
+    pattern = pattern.lower()
+    pattern = re.sub(r'[^\w\s]', '', pattern)  # Remove punctuation
+    pattern = re.sub(r'\s+', ' ', pattern).strip()  # Remove extra spaces
+    return pattern
+
+df['Pattern'] = df['Pattern'].apply(preprocess_pattern)
 
 # Prepare labels
 labels = df['Tag'].unique().tolist()
 label2id = {label: id for id, label in enumerate(labels)}
-id2label = {v: k for k, v in label2id.items()}
-df['labels'] = df['Tag'].map(label2id)
+id2label = {id: label for label, id in label2id.items()}
+df['labels'] = df['Tag'].map(lambda x: label2id[x.strip()])
 
-# Split the data into train and test
+# Split data
 X = list(df['Pattern'])
 y = list(df['labels'])
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=123)
 
-# Load BERT Pretrained model and Tokenizer
+# Load BERT model and tokenizer
 model_name = "indolem/indobert-base-uncased"
 tokenizer = BertTokenizer.from_pretrained(model_name)
-model = BertForSequenceClassification.from_pretrained(
-    model_name, 
-    num_labels=len(label2id),
-    id2label=id2label,
-    label2id=label2id
-)
+model = BertForSequenceClassification.from_pretrained(model_name, num_labels=len(label2id))
 
-# Transform the data into numerical format
-train_encoding = tokenizer(X_train, truncation=True, padding=True, max_length=512)
-test_encoding = tokenizer(X_test, truncation=True, padding=True, max_length=512)
+# Transform the data
+train_encoding = tokenizer(X_train, truncation=True, padding=True, return_tensors="pt")
+test_encoding = tokenizer(X_test, truncation=True, padding=True, return_tensors="pt")
 
-# Build Data Loader
-class DataLoader(Dataset):
+# Define Dataset class
+class ChatbotDataset(Dataset):
     def __init__(self, encodings, labels):
         self.encodings = encodings
         self.labels = labels
@@ -68,10 +80,10 @@ class DataLoader(Dataset):
     def __len__(self):
         return len(self.labels)
 
-train_dataloader = DataLoader(train_encoding, y_train)
-test_dataloader = DataLoader(test_encoding, y_test)
+train_dataset = ChatbotDataset(train_encoding, y_train)
+test_dataset = ChatbotDataset(test_encoding, y_test)
 
-# Define Evaluation Metrics
+# Define evaluation metrics
 def compute_metrics(pred):
     labels = pred.label_ids
     preds = pred.predictions.argmax(-1)
@@ -79,117 +91,83 @@ def compute_metrics(pred):
     acc = accuracy_score(labels, preds)
     return {'Accuracy': acc, 'F1': f1, 'Precision': precision, 'Recall': recall}
 
-# Define Training Arguments
+# Training arguments
 training_args = TrainingArguments(
     output_dir='./output',
-    learning_rate=5e-5,
     do_train=True,
     do_eval=True,
-    fp16=True,
-    num_train_epochs=1,  # Increased epochs for better training
-    per_device_train_batch_size=32,  # Adjusted batch size
+    num_train_epochs=70,
+    per_device_train_batch_size=32,
     per_device_eval_batch_size=16,
+    warmup_steps=100,
+    weight_decay=0.01,
+    gradient_accumulation_steps=2,
+    max_grad_norm=1.0,  # Gradient clipping
     logging_strategy='steps',
     logging_steps=50,
     evaluation_strategy="steps",
+    eval_steps=50,
     save_strategy="steps",
     load_best_model_at_end=True,
+    fp16=True,
 )
 
-# Train the model
 trainer = Trainer(
     model=model,
     args=training_args,
-    train_dataset=train_dataloader,
-    eval_dataset=test_dataloader,
+    train_dataset=train_dataset,
+    eval_dataset=test_dataset,
     compute_metrics=compute_metrics,
 )
 
-print("Training the model...")
+# Train the model
 trainer.train()
 
-# Ensure model path exists
+# Save the model
 model_path = "chatbot"
-os.makedirs(model_path, exist_ok=True)
+trainer.save_model(model_path)
+tokenizer.save_pretrained(model_path)
 
-# Save model and tokenizer using multiple methods for reliability
-try:
-    # Method 1: Save with save_pretrained
-    model.save_pretrained(model_path)
-    tokenizer.save_pretrained(model_path)
-    
-    # Method 2: Save state dict
-    torch.save(model.state_dict(), os.path.join(model_path, 'model_state.pth'))
-    
-    print(f"Model saved successfully in {model_path}")
-except Exception as e:
-    print(f"Error saving model: {e}")
+# Load trained model
+model = BertForSequenceClassification.from_pretrained(model_path)
+tokenizer = BertTokenizer.from_pretrained(model_path)
 
-# Load the model
-print("Loading model...")
-try:
-    # Try loading with save_pretrained method
-    model = BertForSequenceClassification.from_pretrained(
-        model_path, 
-        id2label=id2label, 
-        label2id=label2id
-    )
-    tokenizer = BertTokenizer.from_pretrained(model_path)
-    
-    # Create pipeline
-    chatbot = pipeline("text-classification", model=model, tokenizer=tokenizer)
-except Exception as e:
-    print(f"Error loading model: {e}")
+# Predict intent
+def predict_intent(text):
+    tokens = tokenizer(text, truncation=True, padding=True, return_tensors="pt")
+    outputs = model(**tokens)
+    predictions = torch.argmax(outputs.logits, dim=-1)
+    return predictions.item()
 
-# Flask Application for Chatbot
-app = Flask(__name__)
-
-# Route Halaman Utama
+# Flask endpoints
 @app.route("/")
 def index():
     return render_template("index.html")
 
-# Fungsi utama untuk mendapatkan respons dari chatbot
-def get_chatbot_response(user_input, chatbot, intents, id2label):
-    try:
-        prediction = chatbot(user_input)[0]
-        label = prediction['label']  # Formatnya seperti "LABEL_0"
-        tag = id2label.get(int(label.split('_')[-1]), None)  # Ambil tag berdasarkan ID label
-
-        if tag:
-            for intent in intents['intents']:
-                if intent['tag'] == tag:
-                    return random.choice(intent['responses']) if intent['responses'] else "I'm not sure how to respond to that."
-        return "I'm not sure how to respond to that."
-    except Exception as e:
-        print(f"Error in get_chatbot_response: {e}")
-        return "Sorry, I'm experiencing some difficulties."
-
-# Flask route
 @app.route("/chat", methods=["POST"])
 def chat():
-    user_input = request.json.get("message", "")
-    response = get_chatbot_response(user_input, chatbot, intents, id2label)
-    return jsonify({"response": response})
+    user_message = request.json.get("message", "").strip()
+    if not user_message:
+        return jsonify({"response": "I didn't receive any message. Please try again."})
 
-# Mode interaktif CLI
-def interactive_chat(chatbot, intents, id2label):
-    print("Chatbot: Hi! I am your virtual assistant. Feel free to ask, and I'll do my best to provide you with answers.")
-    print("Type 'quit' to exit the chat\n\n")
+    # Predict intent using the BERT model
+    intent_id = predict_intent(user_message)
+    intent_label = id2label[intent_id]
 
-    user_input = input(":User  ").strip()
-    while user_input != 'quit':
-        if not user_input:
-            print("Chatbot: Please enter a valid query.")
-        else:
-            response = get_chatbot_response(user_input, chatbot, intents, id2label)
-            print(f"Chatbot: {response}\n\n")
-        user_input = input(":User  ").strip()
-
-# Pilih mode: Flask API atau CLI
-if __name__ == "__main__":
-    import sys
-    if len(sys.argv) > 1 and sys.argv[1] == "cli":
-        interactive_chat(chatbot, intents, id2label)
+    # Fetch the response from the dataset based on predicted intent
+    response_list = []
+    for intent in intents['intents']:
+        if intent['tag'] == intent_label:
+            response_list = intent['responses']
+            break
+    
+    if response_list:
+        # Return a random response from the matched intent
+        bot_response = random.choice(response_list)
     else:
-        app.run(debug=True)
+        bot_response = "I'm not sure how to respond to that."
+
+    return jsonify({"response": bot_response})
+
+if __name__ == "__main__":
+    app.run(debug=True)
